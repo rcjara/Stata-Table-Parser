@@ -43,6 +43,14 @@ describe StataTableParser do
     it "should have the proper row names" do
       @parser.first_table.row_names.should == one_double_wide_table_row_names
     end
+    
+    it "should have the proper column var name" do
+      @parser.first_table.col_var_name.should == "occ21"
+    end
+
+    it "should have the proper row var name" do
+      @parser.first_table.row_var_name.should == "bea67"
+    end
   end
   
   context "OneSimpleTable" do

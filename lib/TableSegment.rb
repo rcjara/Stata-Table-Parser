@@ -69,6 +69,11 @@ class TableSegment
     @col_names
   end
   
+  def col_var_name
+    return @col_var_name if @col_var_name
+    @col_var_name = @lines[start_of_rows - 3][start_of_cols..-1].strip
+    @col_var_name
+  end
   
   def rows
     return @rows if @rows
@@ -90,6 +95,13 @@ class TableSegment
     
     @row_names
   end
+  
+  def row_var_name
+    return @row_var_name if @row_var_name
+    @row_var_name = @lines[start_of_rows - 2][0..(start_of_cols - 2)].strip
+    @row_var_name
+  end
+  
   
   def start_of_rows
     return @start_of_rows if @start_of_rows

@@ -33,10 +33,23 @@ class StataTable
     @row_names
   end
   
+  def row_var_name
+    return @row_var_name if @row_var_name
+    @row_var_name = segments.first.row_var_name
+    @row_var_name
+  end
+  
+  
   def col_names
     return @col_names if @col_names
     @col_names = segments.collect{|seg| seg.col_names }.flatten
     @col_names
+  end
+  
+  def col_var_name
+    return @col_var_name if @col_var_name
+    @col_var_name = segments.first.col_var_name
+    @col_var_name
   end
   
   

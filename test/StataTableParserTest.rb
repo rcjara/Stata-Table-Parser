@@ -1,4 +1,7 @@
 require File.dirname(__FILE__) + '/../lib/StataTableParser.rb'
+require File.dirname(__FILE__) + '/StataTableParserHelper.rb'
+
+include StataTableParserHelper
 
 describe StataTableParser do
   context "bigfile.txt" do
@@ -53,6 +56,14 @@ describe StataTableParser do
     
     it "should show that it has a single segment" do
       @parser.first_table.num_segments.should == 1
+    end
+    
+    it "should have the proper column names" do
+      @parser.first_table.col_names.should == one_simple_table_col_names
+    end
+    
+    it "should have the proper row names" do
+      @parser.first_table.row_names.should == one_simple_table_row_names
     end
   end
   

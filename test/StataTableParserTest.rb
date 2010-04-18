@@ -35,6 +35,14 @@ describe StataTableParser do
     it "should show that it has multiple segments" do
       @parser.first_table.num_segments.should == 2
     end
+    
+    it "should have the proper column names" do
+      @parser.first_table.col_names.should == one_double_wide_table_col_names
+    end
+
+    it "should have the proper row names" do
+      @parser.first_table.row_names.should == one_double_wide_table_row_names
+    end
   end
   
   context "OneSimpleTable" do

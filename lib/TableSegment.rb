@@ -58,6 +58,18 @@ class TableSegment
     @cols
   end
   
+  def col_names
+    return @col_names if @col_names
+    @col_names = []
+    line = @lines[start_of_rows - 2]
+    cols.each_cons(2) do |start, finish|
+      @col_names << line[start...finish].strip
+    end
+    @col_names << line[cols.last..-1].strip
+    @col_names
+  end
+  
+  
   def rows
     return @rows if @rows
     found_end = false
@@ -68,6 +80,16 @@ class TableSegment
     @rows
   end
   
+  def row_names
+    return @row_names if @row_names
+     
+     column_border = start_of_cols - 2
+    @row_names = @lines[start_of_rows...(start_of_rows + num_rows)].collect do |line|
+      line[0..column_border].strip
+    end
+    
+    @row_names
+  end
   
   def start_of_rows
     return @start_of_rows if @start_of_rows

@@ -27,6 +27,19 @@ class StataTable
     segments.length
   end
   
+  def row_names
+    return @row_names if @row_names
+    @row_names = segments.first.row_names
+    @row_names
+  end
+  
+  def col_names
+    return @col_names if @col_names
+    @col_names = segments.collect{|seg| seg.col_names }.flatten
+    @col_names
+  end
+  
+  
   def cols
     
   end

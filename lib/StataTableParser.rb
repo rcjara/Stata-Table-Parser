@@ -1,7 +1,5 @@
-require File.dirname(__FILE__) + '/CSVManipulations.rb'
-require File.dirname(__FILE__) + '/RegexFns.rb'
 require File.dirname(__FILE__) + '/StataTable.rb'
-require "Set"
+
 
 HORIZONTAL_BORDER = /^-----/
 

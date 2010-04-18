@@ -28,6 +28,10 @@ describe StataTableParser do
     it "should have the right number of rows" do
       @parser.first_table.num_rows.should == 81
     end
+    
+    it "should show that it has multiple segments" do
+      @parser.first_table.num_segments.should == 2
+    end
   end
   
   context "OneSimpleTable" do
@@ -45,6 +49,10 @@ describe StataTableParser do
     
     it "should have the right number of rows" do
       @parser.first_table.num_rows.should == 81
+    end
+    
+    it "should show that it has a single segment" do
+      @parser.first_table.num_segments.should == 1
     end
   end
   

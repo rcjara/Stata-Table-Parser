@@ -6,7 +6,7 @@ HORIZONTAL_BORDER = /^-----/
 
 class StataTableParser  
   def initialize(filename)
-    @lines = File.read(filename).toutf8.split(MAC_WIN_UNIX_LINE_BREAKS)
+    @lines = File.read(filename).split(MAC_WIN_UNIX_LINE_BREAKS)
     @table_indexes = nil
     @tables = nil
   end
@@ -32,7 +32,7 @@ class StataTableParser
   def tables
     return @tables if @tables
     @tables = []
-    indexes_with_end = table_indexes + [-1]
+    indexes_with_end = table_indexes + [-1] #adding the -1 so that when each_cons is run, it will create slices that proceed all the way to the end of the file.
     indexes_with_end.each_cons(2) do |first, second|
       @tables << StataTable.new(@lines[first..second])
     end
@@ -57,17 +57,20 @@ class StataTable
   
   def cols
     return @cols if @cols
-    cols_set = SortedSet.new
-    cols_set.add(start_of_rows)
+    @cols = SortedSet.new
+    @cols.add(start_of_cols)
     @lines[start_of_rows...(start_of_rows + num_rows)].each do |line|
       offset = start_of_cols
       loop do
         result = line.index(/\S\s/, offset)
         break unless result
-        cols_set.add(result)
+        offset = result + 1
+        @cols.add(offset)
       end
     end
-    @cols = cols_set.to_a[0...-1]
+    
+    @cols = @cols.to_a
+    @cols
   end
   
   def rows
@@ -99,7 +102,8 @@ class StataTable
   
   def start_of_cols
     return @start_of_cols if @start_of_cols
-    @start_of_cols = @lines[start_of_rows].index("|") + 1
+    line = @lines[start_of_rows]
+    @start_of_cols = line.index('|') + 1
     @start_of_cols
   end
   

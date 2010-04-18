@@ -40,7 +40,7 @@ describe StataTableParser do
     end
     
     it "should have the right number of columns" do
-      @parser.first_table.num_cols.should == 16
+      @parser.first_table.num_cols.should == 5
     end
     
     it "should have the right number of rows" do

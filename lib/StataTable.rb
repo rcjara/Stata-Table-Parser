@@ -5,6 +5,38 @@ class StataTable
     @lines = lines
   end
   
+  def to_csv
+    self.to_a.collect do |line_array|
+      "\"#{line_array.join("\",\"")}\""
+    end.join("\n")
+  end
+  
+  def to_a
+    return @as_array if @as_array
+    @as_array = []
+    
+    first_line = []
+    (num_cols / 2).times { first_line << ""}
+    first_line << col_var_name
+    (num_cols - first_line.length).times {first_line << "" }
+    @as_array << first_line
+    
+    second_line = []
+    second_line << row_var_name
+    second_line << col_names
+    @as_array << second_line
+    
+    (0...num_rows).each do |i|
+      line = []
+      line << row_names[i]
+      segments.each do |segment|
+        line << segment.grab_row(i)
+      end
+      @as_array << line.flatten
+    end
+    @as_array
+  end
+  
   def num_cols
     return @num_cols if @num_cols
     

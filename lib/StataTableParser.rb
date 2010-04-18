@@ -5,9 +5,20 @@ HORIZONTAL_BORDER = /^-----/
 
 class StataTableParser  
   def initialize(filename)
+    @filename = filename
     @lines = File.read(filename).split(MAC_WIN_UNIX_LINE_BREAKS)
-    @table_indexes = nil
-    @tables = nil
+  end
+  
+  def csv_out(filename = nil)
+    unless filename
+      filename = @filename.gsub(/\.txt|\.log/, ".csv")
+    end
+    File.open(filename, 'w') do |w|
+      tables.each do |table|
+        w << table.to_csv
+        w << "\n\n"
+      end
+    end
   end
   
   def num_tables

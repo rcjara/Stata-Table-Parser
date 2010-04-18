@@ -83,4 +83,36 @@ describe StataTableParser do
     end
   end
   
+  context "SmallWideTable" do
+    before(:each) do
+      @parser = StataTableParser.new(File.dirname(__FILE__) + "/../TestTables/SmallWideTable.txt")
+    end
+    
+    it "should be able to output a csv file meeting specifications" do
+      @parser.csv_out(File.dirname(__FILE__) + "/../TestTables/output.csv")
+      File.read(File.dirname(__FILE__) + "/../TestTables/output.csv").should == File.read(File.dirname(__FILE__) + "/../TestTables/SmallWideTable.csv")
+    end
+    
+    it "should be able to fine the right number of tables in the file" do
+      @parser.num_tables.should == 1
+    end
+    
+    it "should have the right number of columns" do
+      @parser.first_table.num_cols.should == 22
+    end
+    
+    it "should have the right number of rows" do
+      @parser.first_table.num_rows.should == 6
+    end
+    
+    it "should show that it has two segments" do
+      @parser.first_table.num_segments.should == 2
+    end
+    
+    it "should have the proper column names" do
+      @parser.first_table.col_names.should == one_double_wide_table_col_names
+    end
+    
+  end
+  
 end

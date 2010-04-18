@@ -40,6 +40,17 @@ class TableSegment
     rows.length
   end
   
+  def grab_row(row_num)
+    row_array = []
+    line = @lines[start_of_rows + row_num]
+    cols.each_cons(2) do |start, finish|
+      row_array << line[start...finish].strip
+    end
+    row_array << line[cols.last..-1].strip
+    row_array
+  end
+  
+  
   def cols
     return @cols if @cols
     @cols = SortedSet.new

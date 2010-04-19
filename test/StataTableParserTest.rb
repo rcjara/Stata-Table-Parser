@@ -9,10 +9,13 @@ describe StataTableParser do
       @parser = StataTableParser.new(File.dirname(__FILE__) + "/../TestTables/bigfile.txt")
     end
     
-    it "should be able to fine the right number of tables in the file" do
+    it "should be able to find the right number of tables in the file" do
       @parser.num_tables.should == 17
     end
     
+    it "should be able to csv out without an error" do
+      @parser.csv_out(File.dirname(__FILE__) + "/../TestTables/bigfileout.csv")
+    end
   end
   
   context "OneDoubleWideTable.txt" do
@@ -114,5 +117,7 @@ describe StataTableParser do
     end
     
   end
+  
+  
   
 end

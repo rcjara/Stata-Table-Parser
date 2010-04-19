@@ -22,6 +22,9 @@ class TableSegment
           break
         end
       end
+      if line.one_match?(/^\.\ \S/) #found a new command
+        break
+      end
     end
     return false unless end_point
     @lines = @lines[start_point..end_point]

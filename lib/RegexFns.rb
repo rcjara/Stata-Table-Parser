@@ -5,3 +5,9 @@ class String
     self.scan(regex).length == 1
   end
 end
+
+class NilClass
+  def strip
+    ""
+  end
+end

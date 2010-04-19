@@ -2,8 +2,14 @@ require File.dirname(__FILE__) + '/TableSegment.rb'
 
 class StataTable
   def initialize(lines)
+    @command = lines[0]
     @lines = lines
   end
+  
+  def print
+    @lines.each { |line| puts line }
+  end
+  
   
   def to_csv
     self.to_a.collect do |line_array|
@@ -14,6 +20,7 @@ class StataTable
   def to_a
     return @as_array if @as_array
     @as_array = []
+    @as_array << [@command]
     
     first_line = []
     (num_cols / 2).times { first_line << ""}

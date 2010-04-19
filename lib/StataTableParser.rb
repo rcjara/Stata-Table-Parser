@@ -15,8 +15,10 @@ class StataTableParser
     end
     File.open(filename, 'w') do |w|
       tables.each do |table|
+        # table.print
         w << table.to_csv
         w << "\n\n"
+        # puts "<<<<<<<<<good>>>>>>>>"
       end
     end
   end

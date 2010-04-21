@@ -36,7 +36,7 @@ class StataTableParser
     return @table_indexes if @table_indexes
     @table_indexes = []
     @lines.each_with_index do |line, i|
-      @table_indexes << i if line.one_match?(/^\.\ table\ /)
+      @table_indexes << i if line.one_match?(/^\.\ tab\ /)
     end
     @table_indexes
   end

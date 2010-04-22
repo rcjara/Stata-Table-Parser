@@ -2,7 +2,7 @@
       name:  <unnamed>
        log:  /Users/rauljara/Documents/Work/ILS Research/Work for Rose/Input_Output/CPS 07-09/DistributionOfWorkers.txt
   log type:  text
- opened on:  22 Apr 2010, 09:27:34
+ opened on:  22 Apr 2010, 09:41:13
 
 .         do "do_files/TableOfDistributionOfWorkers.do"
 
@@ -73,397 +73,397 @@
 . *gen display_var = bea_sum + `","' + string(num_workers)
 . 
 . *tabdisp rank which_category, cell(display_var) cellwidth(20) 
-. tabdisp rank which_category, cell(which_category num_workers) cellwidth(20) 
+. tabdisp rank which_category, cell(bea_sum num_workers) cellwidth(20) 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
          |                                                           which_category                                                          
     rank |        businessservs      clothingperscare             education               exports                  food                   gov
 ---------+-----------------------------------------------------------------------------------------------------------------------------------
-       1 |        businessservs      clothingperscare             education               exports                  food                   gov
+       1 |                 52A0                  4A00                  6100                  4200                  7220                  S007
          |              3855636               8558629              2.83e+07               1794717              2.02e+07              1.09e+07
          | 
-       2 |        businessservs      clothingperscare             education               exports                  food                   gov
+       2 |                 7130                  8120                  S007                  4840                  4A00                  S006
          |              3171153              682977.3               7200916              957452.4              1.05e+07               5830862
          | 
-       3 |        businessservs      clothingperscare             education               exports                  food                   gov
+       3 |                 5411                  3150                  561A                  52A0                  3110                  S005
          |              1917564              664023.1              996089.7              952708.9               3454069               2576014
          | 
-       4 |        businessservs      clothingperscare             education               exports                  food                   gov
+       4 |                 5240                  813A                  6240                  561A                  1120                  2301
          |              1666451              507656.9              935127.6              942150.8               1970093               2415783
          | 
-       5 |        businessservs      clothingperscare             education               exports                  food                   gov
+       5 |                 5230                  4200                  7220                  3364                  4200                  2302
          |              1419037              493033.6              423887.6              707628.9               1929164               1723531
          | 
-       6 |        businessservs      clothingperscare             education               exports                  food                   gov
+       6 |                 5250                  8111                  2303                  4A00                  1110                  2303
          |             860068.4              408698.1              396036.3              562732.1               1485625               1657808
          | 
-       7 |        businessservs      clothingperscare             education               exports                  food                   gov
+       7 |                 561A                  561A                  4200                  3399                  4840                  561A
          |             660566.4              342930.7              361582.3              510725.6               1073868               1420818
          | 
-       8 |        businessservs      clothingperscare             education               exports                  food                   gov
+       8 |                 5170                  7130                  4A00                  48A0                  561A                  4A00
          |             382906.5              307809.2              360812.3              446675.7              929727.7               1168824
          | 
-       9 |        businessservs      clothingperscare             education               exports                  food                   gov
+       9 |                 7220                  8140                  5310                  5415                  52A0                  5415
          |             377909.3              272162.3              357651.3              442136.5              551480.5               1013752
          | 
-      10 |        businessservs      clothingperscare             education               exports                  food                   gov
+      10 |                 4A00                  52A0                  2301                  336B                  3121                  4200
          |             293030.2                172195              311502.2              428291.7                523339              872419.6
          | 
-      11 |        businessservs      clothingperscare             education               exports                  food                   gov
+      11 |                 2301                  4840                  52A0                  1110                  2301                  5413
          |             272511.7              167849.2              302131.2              425671.8              489811.9              844356.3
          | 
-      12 |        businessservs      clothingperscare             education               exports                  food                   gov
+      12 |                 2303                  2301                  5413                  2303                  2303                  3364
          |             271081.8                165847              250186.3              425053.2                480645              547492.3
          | 
-      13 |        businessservs      clothingperscare             education               exports                  food                   gov
+      13 |                 4850                  811A                  3110                  7220                  S001                  7220
          |             228603.1              146350.3              245963.2              421191.3              339135.6              483722.3
          | 
-      14 |        businessservs      clothingperscare             education               exports                  food                   gov
+      14 |                 5412                  2303                  5412                  5411                  71A0                  5417
          |             227676.3              144351.2              227698.8              401440.6                314986              458755.5
          | 
-      15 |        businessservs      clothingperscare             education               exports                  food                   gov
+      15 |                 5416                  7220                  5415                  4810                  5240                  4840
          |             201716.4              112406.9              227292.5              393087.5              296819.3              449818.1
          | 
-      16 |        businessservs      clothingperscare             education               exports                  food                   gov
+      16 |                 4200                  3399                  5416                  2301                  5412                  52A0
          |             178826.5              106540.7              217330.5              391251.8              288886.4                391353
          | 
-      17 |        businessservs      clothingperscare             education               exports                  food                   gov
+      17 |                 5415                  5240                  3230                  4920                  5310                  5416
          |             176327.1              97241.97              205231.9              381154.2              281238.1              374641.6
          | 
-      18 |        businessservs      clothingperscare             education               exports                  food                   gov
+      18 |                 71A0                  3130                  5411                  5240                  4920                  5411
          |             160857.8              93768.08              195268.5              369105.4              247512.7              326048.4
          | 
-      19 |        businessservs      clothingperscare             education               exports                  food                   gov
+      19 |                 7210                  813B                  3399                  5230                  5411                  5170
          |             156540.4              90549.56              189513.2              361308.8              238763.5              296743.4
          | 
-      20 |        businessservs      clothingperscare             education               exports                  food                   gov
+      20 |                 3230                  7210                  4840                  1120                  5413                  6100
          |             145770.1              90028.49              184069.9              356392.9                237546              292596.8
          | 
-      21 |        businessservs      clothingperscare             education               exports                  food                   gov
+      21 |                 S002                  4920                  S001                  332B                  5416                  5412
          |             141514.4              89506.55              177511.6              346117.9                222698              290521.4
          | 
-      22 |        businessservs      clothingperscare             education               exports                  food                   gov
+      22 |                 5613                  S001                  5170                  3110                  48A0                  5613
          |             141182.4              80201.82              176713.3                319753              220941.3              232935.6
          | 
-      23 |        businessservs      clothingperscare             education               exports                  food                   gov
+      23 |                 5310                  5412                  5240                  5413                  3260                  3370
          |             135973.7              78227.77              166998.2              306602.3              211253.5              223016.8
          | 
-      24 |        businessservs      clothingperscare             education               exports                  food                   gov
+      24 |                 S007                  5310                  8120                  5416                  3399                  3399
          |             133397.7              78078.01              157751.1              304316.8              194450.2              220423.5
          | 
-      25 |        businessservs      clothingperscare             education               exports                  food                   gov
+      25 |                 S001                  5411                  4850                  5412                  5415                  7210
          |             123850.3              71269.46              155438.6              300608.6              194408.7              214350.3
          | 
-      26 |        businessservs      clothingperscare             education               exports                  food                   gov
+      26 |                 5413                  5416                  2213                  336A                  5613                  3270
          |               121183              70879.34              155199.5              283955.2              183474.5              208419.4
          | 
-      27 |        businessservs      clothingperscare             education               exports                  food                   gov
+      27 |                 4920                  3160                  5613                  3260                  3230                  3230
          |               112113              70420.67              154254.3              281535.3              174931.5              198376.1
          | 
-      28 |        businessservs      clothingperscare             education               exports                  food                   gov
+      28 |                 5418                  4930                  5417                  5120                  1150                  332B
          |             105501.3              70416.03              142590.5              235793.9                170965              196810.3
          | 
-      29 |        businessservs      clothingperscare             education               exports                  food                   gov
+      29 |                 5111                  5613                  7210                  3254                  5418                  5240
          |             101060.1              67303.49              142234.9              226377.8              168797.6              194778.5
          | 
-      30 |        businessservs      clothingperscare             education               exports                  food                   gov
+      30 |                 5151                  3230                  5111                  5170                  S007                  5419
          |             98357.51              66634.86              140708.6                211644              167412.6              194276.1
          | 
-      31 |        businessservs      clothingperscare             education               exports                  food                   gov
+      31 |                 5419                  5413                  71A0                  5613                  4930                  3210
          |             92980.45              65634.91              137108.1              207010.2              165004.8              189130.3
          | 
-      32 |        businessservs      clothingperscare             education               exports                  food                   gov
+      32 |                 48A0                  71A0                  5419                  3361                  2211                  336B
          |             90719.86              63892.93              133226.9                206699              163405.8              187382.6
          | 
-      33 |        businessservs      clothingperscare             education               exports                  food                   gov
+      33 |                 3399                  48A0                  S002                  532A                  5419                  332A
          |             81261.66               59963.8              129052.8              203919.9              154994.4              187088.1
          | 
-      34 |        businessservs      clothingperscare             education               exports                  food                   gov
+      34 |                 4840                  5418                  4920                  71A0                  3222                  4850
          |              80503.2              59795.08              125699.6              199169.6              154093.5              182239.3
          | 
-      35 |        businessservs      clothingperscare             education               exports                  food                   gov
+      35 |                 3341                  5415                  2211                  5111                  5170                  71A0
          |             70642.79              53488.25              124977.3              191922.5              153160.3              169894.5
          | 
-      36 |        businessservs      clothingperscare             education               exports                  food                   gov
+      36 |                 5615                  3254                  811A                  3230                  5111                  3260
          |              52859.5              53157.36              99103.35              184631.3              141087.8              163779.8
          | 
-      37 |        businessservs      clothingperscare             education               exports                  food                   gov
+      37 |                 8111                  5111                  5620                  5419                  5151                  3341
          |             50699.38              52493.27              96933.44              182364.4              140042.5              160517.8
          | 
-      38 |        businessservs      clothingperscare             education               exports                  food                   gov
+      38 |                 8120                  5170                  1120                  3391                  332B                  48A0
          |             50173.22              49495.38              92412.32              182073.2              139398.6              154597.6
          | 
-      39 |        businessservs      clothingperscare             education               exports                  food                   gov
+      39 |                 813B                  5151                  5418                  331A                  7210                  5111
          |             49072.03              47014.77              88090.76              181854.5              138393.2              153615.4
          | 
-      40 |        businessservs      clothingperscare             education               exports                  food                   gov
+      40 |                 811A                  S007                  8111                  S001                  3270                  5310
          |             49006.01              46853.47               84754.5              179154.5              125479.5                144788
          | 
-      41 |        businessservs      clothingperscare             education               exports                  food                   gov
+      41 |                 5120                  5414                  48A0                  3332                  4820                  S001
          |             44434.26              43271.28              78197.21              169846.6              118669.3              140274.1
          | 
-      42 |        businessservs      clothingperscare             education               exports                  food                   gov
+      42 |                 6100                  5419                  5120                  5417                  5120                  811A
          |             42024.01              42963.94              76598.25              165750.7              106206.2              137736.2
          | 
-      43 |        businessservs      clothingperscare             education               exports                  food                   gov
+      43 |                 4810                  332B                  5414                  3251                  3361                  336A
          |             41915.61              38809.19              75127.45              165398.1              103845.7              137625.4
          | 
-      44 |        businessservs      clothingperscare             education               exports                  food                   gov
+      44 |                 3370                  3260                  1110                  3331                  336A                  4920
          |             41526.94              38265.51              74860.55              159024.4              99975.43              129735.1
          | 
-      45 |        businessservs      clothingperscare             education               exports                  food                   gov
+      45 |                 5414                  2211                  5151                  5418                  3370                  3361
          |             39397.73              36800.67              72236.17              156557.5              95270.59              125494.4
          | 
-      46 |        businessservs      clothingperscare             education               exports                  food                   gov
+      46 |                 5152                  3251                  5230                  3270                  3122                  4810
          |             38962.48              36240.89              66659.57              154884.5              93637.99              121821.9
          | 
-      47 |        businessservs      clothingperscare             education               exports                  food                   gov
+      47 |                 3361                  5230                  3260                  5321                  3210                  3323
          |             37238.76              34346.22              62369.27              151738.3              89611.45              117964.9
          | 
-      48 |        businessservs      clothingperscare             education               exports                  food                   gov
+      48 |                 2211                  336A                  5190                  4820                  5414                  8120
          |             31324.74              34266.43               53195.8              148797.3               89473.8              116046.6
          | 
-      49 |        businessservs      clothingperscare             education               exports                  food                   gov
+      49 |                 332B                  6100                  332B                  5310                  8120                  5414
          |             29332.04              32966.85              51348.98              142366.8              87739.62                109670
          | 
-      50 |        businessservs      clothingperscare             education               exports                  food                   gov
+      50 |                 334A                  S002                  813B                  5414                  8111                  5615
          |             29089.27               32368.3              46826.84              140791.7              85831.21              108972.2
          | 
-      51 |        businessservs      clothingperscare             education               exports                  food                   gov
+      51 |                 3260                  3256                  3341                  3345                  3324                  5620
          |             26199.86              28865.77               46094.2                135596              84622.05              106738.3
          | 
-      52 |        businessservs      clothingperscare             education               exports                  food                   gov
+      52 |                 5417                  3110                  4810                  3339                  811A                  5190
          |             25300.24              26415.69              44303.08              135164.1              81346.99               97955.5
          | 
-      53 |        businessservs      clothingperscare             education               exports                  food                   gov
+      53 |                 1110                  5417                  3210                  7210                  S002                  5418
          |             24541.65              25860.24               43946.8              132637.4              80124.05              97301.93
          | 
-      54 |        businessservs      clothingperscare             education               exports                  food                   gov
+      54 |                 5620                  3370                  4930                  S007                  3221                  4930
          |             24421.39              25400.47              42743.97              130026.3              79886.56              95483.66
          | 
-      55 |        businessservs      clothingperscare             education               exports                  food                   gov
+      55 |                 4930                  1110                  5615                  5151                  4850                  2211
          |             23816.11              22996.69              41448.24                129639              76762.03              90459.93
          | 
-      56 |        businessservs      clothingperscare             education               exports                  food                   gov
+      56 |                 336A                  3361                  813A                  3341                  3332                  3345
          |             23045.71              22294.17              41428.48                126709              75877.29               88947.4
          | 
-      57 |        businessservs      clothingperscare             education               exports                  food                   gov
+      57 |                 3210                  3252                  3370                  4930                  5230                  3110
          |             22810.85              22165.68              41094.59              118425.4              75733.14              87008.35
          | 
-      58 |        businessservs      clothingperscare             education               exports                  food                   gov
+      58 |                 5190                  3140                  3270                  3323                  6100                  5230
          |             22423.65              21914.27              41041.56              113535.9                 75247               84715.6
          | 
-      59 |        businessservs      clothingperscare             education               exports                  food                   gov
+      59 |                 3270                  3221                  336A                  2211                  1140                  8111
          |             21418.28              20689.88              40776.33              113415.7              74736.28              83576.68
          | 
-      60 |        businessservs      clothingperscare             education               exports                  food                   gov
+      60 |                 3110                  4810                  2212                  3370                  3331                  5151
          |             21183.28              20399.34              38687.67              107996.9              72853.48              76947.96
          | 
-      61 |        businessservs      clothingperscare             education               exports                  food                   gov
+      61 |                 5180                  3332                  3221                  3256                  5417                  331A
          |             20341.82              19990.03              33545.38              104964.4              70613.06               75446.9
          | 
-      62 |        businessservs      clothingperscare             education               exports                  food                   gov
+      62 |                 1120                  3210                  7130                  3210                  5620                  S002
          |                18310              19930.87              32932.92              104028.3              68299.18              73489.64
          | 
-      63 |        businessservs      clothingperscare             education               exports                  food                   gov
+      63 |                 5321                  3222                  532A                  3335                  4810                  3351
          |             15923.93              19811.94              30950.42              96441.66              66771.58              73004.48
          | 
-      64 |        businessservs      clothingperscare             education               exports                  food                   gov
+      64 |                 3221                  3270                  3361                  3222                  3339                  3391
          |             15414.83              19748.01              30619.97              95522.58              57711.46              70092.46
          | 
-      65 |        businessservs      clothingperscare             education               exports                  food                   gov
+      65 |                 5500                  4850                  4820                  3221                  3341                  1110
          |             12945.47              18905.01              28416.37              94784.88              53758.71              65582.19
          | 
-      66 |        businessservs      clothingperscare             education               exports                  food                   gov
+      66 |                 331A                  3391                  3391                  334A                  3323                  334A
          |             12168.13              18030.44              28054.23              89341.51              51857.68              63531.13
          | 
-      67 |        businessservs      clothingperscare             education               exports                  food                   gov
+      67 |                 532A                  3341                  3351                  3252                  331A                  5120
          |             12127.41              16265.45              27562.69              86522.34              50016.72              63131.28
          | 
-      68 |        businessservs      clothingperscare             education               exports                  food                   gov
+      68 |                 3323                  5620                  3222                  3334                  3251                  3332
          |             11438.62              15771.28              26387.36              83089.77              48804.46              59381.48
          | 
-      69 |        businessservs      clothingperscare             education               exports                  food                   gov
+      69 |                 4820                  5120                  3332                  3130                  5500                  4820
          |             11411.49              15726.03              25866.35               81126.7              46990.51               56576.5
          | 
-      70 |        businessservs      clothingperscare             education               exports                  food                   gov
+      70 |                 3222                  3259                  3254                  331B                  336B                  3254
          |             10945.16              15145.82              25805.18              80830.38              45254.32               52382.9
          | 
-      71 |        businessservs      clothingperscare             education               exports                  food                   gov
+      71 |                 3332                  5615                  3150                  8111                  1130                  3331
          |             10775.22               13663.1              23885.66              79005.63              45079.98              50371.07
          | 
-      72 |        businessservs      clothingperscare             education               exports                  food                   gov
+      72 |                 4830                  4820                  3334                  6100                  7130                  3339
          |              9625.43               12996.1              23836.41              76963.08              44858.86              50050.34
          | 
-      73 |        businessservs      clothingperscare             education               exports                  food                   gov
+      73 |                 3333                  5190                  5180                  5615                  813B                  2213
          |              9110.84              12661.58              23303.97              76503.82              43254.57              49901.65
          | 
-      74 |        businessservs      clothingperscare             education               exports                  food                   gov
+      74 |                 2213                  3323                  8140                  4850                  5615                  3222
          |              8936.98              12543.85              21854.75              76410.34              40937.35              49324.37
          | 
-      75 |        businessservs      clothingperscare             education               exports                  food                   gov
+      75 |                 3240                  5152                  331A                  1150                  5152                  7130
          |              8335.22              12094.48              21478.91              74552.24              38154.09              49246.38
          | 
-      76 |        businessservs      clothingperscare             education               exports                  food                   gov
+      76 |                 5112                  331A                  3251                  5500                  5321                  3221
          |              8332.45              10121.99              20856.98              74483.25               35593.3              48766.84
          | 
-      77 |        businessservs      clothingperscare             education               exports                  food                   gov
+      77 |                 3364                  3339                  3323                  811A                  331B                  1130
          |              8151.56               9830.74              20513.42              73004.04              34451.22              46586.78
          | 
-      78 |        businessservs      clothingperscare             education               exports                  food                   gov
+      78 |                 3345                  1120                  3256                  5190                  2213                  3251
          |              8149.84               9507.24              20014.32              72294.48              32777.39              45790.63
          | 
-      79 |        businessservs      clothingperscare             education               exports                  food                   gov
+      79 |                 336B                  5321                  334A                  332A                  3140                  6240
          |              7919.78               8644.96              19435.34              67176.33              32491.77              45429.22
          | 
-      80 |        businessservs      clothingperscare             education               exports                  food                   gov
+      80 |                 3335                  5500                  5152                  3359                  3334                  5180
          |              7851.26               8296.94              17976.14              65980.16              32148.87              43050.77
          | 
-      81 |        businessservs      clothingperscare             education               exports                  food                   gov
+      81 |                 813A                  336B                  3331                  3240                  2212                  2123
          |              7586.79               7742.82              16606.77               65835.7              30411.16              42495.72
          | 
-      82 |        businessservs      clothingperscare             education               exports                  food                   gov
+      82 |                 3140                  3351                  5321                  3315                  3130                  3334
          |              7557.71               7589.07              16572.47              65678.72              28167.54              41151.37
          | 
-      83 |        businessservs      clothingperscare             education               exports                  food                   gov
+      83 |                 3331                  3255                  3121                  3140                  3240                  3359
          |              7480.36               7521.25              16405.28              63174.77              27635.83              39392.28
          | 
-      84 |        businessservs      clothingperscare             education               exports                  food                   gov
+      84 |                 3359                  2213                  3339                  4830                  3252                  813B
          |              7404.47               7285.15              15773.25              62895.98              26138.77              38817.31
          | 
-      85 |        businessservs      clothingperscare             education               exports                  food                   gov
+      85 |                 3130                  3359                  336B                  S002                  5190                  5112
          |              7188.02                7173.6              15694.25              61179.95              25535.35              38336.71
          | 
-      86 |        businessservs      clothingperscare             education               exports                  food                   gov
+      86 |                 3351                  332A                  3333                  3351                  3254                  1120
          |              7178.98               7104.11              14089.75              59977.25              25514.76              36939.79
          | 
-      87 |        businessservs      clothingperscare             education               exports                  food                   gov
+      87 |                 5324                  334A                  2130                  5324                  3335                  3335
          |              7053.81               6982.67              14057.36              59863.95               24972.6              36456.23
          | 
-      88 |        businessservs      clothingperscare             education               exports                  food                   gov
+      88 |                 3339                  1130                  3335                  3259                  334A                  3240
          |               7016.9               6730.45              13700.32              59625.82              24247.65              36193.93
          | 
-      89 |        businessservs      clothingperscare             education               exports                  food                   gov
+      89 |                 3251                  3240                  3345                  8120                  3333                  331B
          |              6820.58               6633.07              13378.04              54719.29               23770.1              34520.78
          | 
-      90 |        businessservs      clothingperscare             education               exports                  food                   gov
+      90 |                 S006                  2212                  5112                  3336                  3351                  3333
          |               6771.8               6160.78              13350.55              54158.84              22228.64              33923.04
          | 
-      91 |        businessservs      clothingperscare             education               exports                  food                   gov
+      91 |                 331B                  3333                  1130                  1130                  3259                  3140
          |               5573.3                  6068              13279.49              53335.06              21167.45              33326.19
          | 
-      92 |        businessservs      clothingperscare             education               exports                  food                   gov
+      92 |                 3259                  3353                  3240                  5620                  2121                  3150
          |              5390.99               5869.78              13146.97              52694.91              21146.54              33234.97
          | 
-      93 |        businessservs      clothingperscare             education               exports                  food                   gov
+      93 |                 3334                  3331                  3259                  2123                  3345                  3130
          |              5377.01               5867.33              12975.95              52171.22              20959.87              31347.34
          | 
-      94 |        businessservs      clothingperscare             education               exports                  food                   gov
+      94 |                 3121                  3315                  2121                  3333                  3359                  3324
          |              5368.24               5587.85              12841.19              49771.95              20847.65               29226.8
          | 
-      95 |        businessservs      clothingperscare             education               exports                  food                   gov
+      95 |                 2302                  5180                  5500                  3353                  3150                  3353
          |              5241.06               5228.67              11679.73              48136.53              20307.08              29139.45
          | 
-      96 |        businessservs      clothingperscare             education               exports                  food                   gov
+      96 |                 3150                  331B                  1150                  2121                  3253                  6210
          |              5169.48               5205.24              11357.26              48134.59              18794.01              28670.84
          | 
-      97 |        businessservs      clothingperscare             education               exports                  food                   gov
+      97 |                 6220                  3321                  5161                  3324                  5180                  3259
          |              5057.71               5172.35              10747.38              47281.96              17997.14              27978.35
          | 
-      98 |        businessservs      clothingperscare             education               exports                  food                   gov
+      98 |                 1130                  3324                  3130                  3150                  3256                  6220
          |              4777.87               5087.36              10713.15              44454.44              17616.68               27221.5
          | 
-      99 |        businessservs      clothingperscare             education               exports                  food                   gov
+      99 |                 3324                  3345                  2123                  813B                  2123                  4830
          |              4737.19               4984.06              10413.92              43967.41              17196.21              26926.64
          | 
-     100 |        businessservs      clothingperscare             education               exports                  food                   gov
+     100 |                 2121                  3334                  3364                  3121                  3353                  5500
          |              4625.91               4937.54               9978.72              42313.19              17097.19              26868.19
          | 
-     101 |        businessservs      clothingperscare             education               exports                  food                   gov
+     101 |                 3160                  2123                  3359                  2130                  2130                  5321
          |              4541.59               4798.76               9737.36              41384.01               16881.5              26067.06
          | 
-     102 |        businessservs      clothingperscare             education               exports                  food                   gov
+     102 |                 3391                  1150                  4860                  3352                  3364                  3315
          |              4255.29               4370.36               9626.98              39887.24              14777.46              24742.83
          | 
-     103 |        businessservs      clothingperscare             education               exports                  food                   gov
+     103 |                 3322                  5324                  6220                  3321                  532A                  3252
          |              4028.98               4339.95               9279.03              39400.25              14455.95              23561.18
          | 
-     104 |        businessservs      clothingperscare             education               exports                  food                   gov
+     104 |                 3252                  3364                  2110                  5152                  3315                  5152
          |                 3938               4239.11               9215.18               35721.1              14391.02              22856.04
          | 
-     105 |        businessservs      clothingperscare             education               exports                  food                   gov
+     105 |                 2212                  2121                  331B                  3255                  5324                  2130
          |              3891.63               4148.22               9179.26              35209.37              14132.05              21428.85
          | 
-     106 |        businessservs      clothingperscare             education               exports                  food                   gov
+     106 |                 1150                  3336                  5324                  2122                  4830                  3321
          |              3860.22               3958.06               9002.63              34065.71              13977.03              21073.52
          | 
-     107 |        businessservs      clothingperscare             education               exports                  food                   gov
+     107 |                 S005                  3335                  3252                  7130                  3391                  3322
          |              3718.15               3940.22               8588.51              29982.73               13021.4               20853.2
          | 
-     108 |        businessservs      clothingperscare             education               exports                  food                   gov
+     108 |                 5161                  532A                  3140                  5180                  3321                  5324
          |              3417.86               3892.04                8470.5              29466.63              11040.81              20783.74
          | 
-     109 |        businessservs      clothingperscare             education               exports                  food                   gov
+     109 |                 2130                  3253                  3322                  2212                  2110                  2212
          |               3120.7               3876.06                8309.9              28250.52              10547.64              20114.36
          | 
-     110 |        businessservs      clothingperscare             education               exports                  food                   gov
+     110 |                 2123                  3352                  3255                  5112                  3255                  532A
          |              3026.87                3788.5               8308.92              26618.66              10309.57              17842.74
          | 
-     111 |        businessservs      clothingperscare             education               exports                  food                   gov
+     111 |                 3255                  4860                  3324                  2110                  3322                  3256
          |              2926.68               3624.23                8296.2              26394.44                 10159              17838.58
          | 
-     112 |        businessservs      clothingperscare             education               exports                  food                   gov
+     112 |                 3256                  5112                  6210                  3322                  3336                  3255
          |              2901.67               3462.43               8291.19              21946.16               9927.95              16763.88
          | 
-     113 |        businessservs      clothingperscare             education               exports                  food                   gov
+     113 |                 2122                  5330                  3315                  5330                  5112                  6230
          |              2878.54               3338.94               6499.81              21218.89               9450.66              15191.73
          | 
-     114 |        businessservs      clothingperscare             education               exports                  food                   gov
+     114 |                 3321                  3121                  4830                  2213                  2122                  3336
          |              2770.81               3189.27               5680.11              20076.49               7568.55              14889.54
          | 
-     115 |        businessservs      clothingperscare             education               exports                  food                   gov
+     115 |                 6230                  6220                  3352                  3253                  S006                  3352
          |               2537.2               3020.16               5606.69              19500.91               7490.77              14271.64
          | 
-     116 |        businessservs      clothingperscare             education               exports                  food                   gov
+     116 |                 3352                  2110                  S006                  3160                  4860                  1150
          |              2453.05               2858.76                5505.2              15406.63               7406.29              13787.83
          | 
-     117 |        businessservs      clothingperscare             education               exports                  food                   gov
+     117 |                 5330                  5161                  332A                  4860                  5330                  2121
          |              2403.59               2491.44                5297.8              14924.92               6888.33              12948.53
          | 
-     118 |        businessservs      clothingperscare             education               exports                  food                   gov
+     118 |                 4860                  2130                  2122                  6220                  6220                  2110
          |              2245.03               1966.57               5095.76              10580.57               6643.61              12582.21
          | 
-     119 |        businessservs      clothingperscare             education               exports                  food                   gov
+     119 |                 3336                  6210                  2302                  3122                  3160                  3160
          |              2140.58               1632.78               5000.43                7936.5               6026.59              10181.38
          | 
-     120 |        businessservs      clothingperscare             education               exports                  food                   gov
+     120 |                 2110                  5250                  3353                  S006                  332A                  2122
          |              1978.37               1542.88               4401.74               7587.09               5529.21               9472.15
          | 
-     121 |        businessservs      clothingperscare             education               exports                  food                   gov
+     121 |                 3315                  2122                  1140                  1140                  6210                  4860
          |              1968.74               1010.96               4348.64               7172.45               4851.53               8071.67
          | 
-     122 |        businessservs      clothingperscare             education               exports                  food                   gov
+     122 |                 3353                  1140                  3336                  6210                  3352                  3253
          |              1831.74                687.41               4298.24               6367.59                4170.3                  5921
          | 
-     123 |        businessservs                                   education               exports                  food                   gov
+     123 |                 3254                                        6230                  5250                  2302                  3121
          |              1792.78                                     4030.69               6100.77               3143.17               5712.31
          | 
-     124 |        businessservs                                   education               exports                  food                   gov
+     124 |                 332A                                        3160                  813A                  5161                  813A
          |              1512.31                                     3692.97                3736.2               2616.13               5291.19
          | 
-     125 |        businessservs                                   education               exports                  food                   gov
+     125 |                 3253                                        3321                  2302                  813A                  5330
          |              1385.39                                     3587.56               3420.79               2214.63               4569.69
          | 
-     126 |        businessservs                                   education               exports                  food                   gov
+     126 |                 6210                                        3253                  5161                  S005                  5250
          |              1303.24                                     2971.87               3389.99               1594.64                4190.5
          | 
-     127 |        businessservs                                   education               exports                  food                   gov
+     127 |                 6240                                        5250                  8140                  5250                  5161
          |              1236.19                                     2375.38               1425.14                1583.1               4172.12
          | 
-     128 |                                                        education               exports                  food                   gov
+     128 |                                                             S005                  6240                  6230                  1140
          |                                                          2064.81               1062.08               1232.35               4061.12
          | 
-     129 |                                                        education                                        food                      
+     129 |                                                             5330                                        6240                      
          |                                                          1263.78                                     1041.05                      
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -471,391 +471,391 @@
          |                                                which_category                                               
     rank |                heath               housing            investment       recreatnleisure        transportation
 ---------+-------------------------------------------------------------------------------------------------------------
-       1 |                heath               housing            investment       recreatnleisure        transportation
+       1 |                 6210                  4A00                  2301                  6240                  4A00
          |             1.88e+07               6947562               6290840               7999165               5355128
          | 
-       2 |                heath               housing            investment       recreatnleisure        transportation
+       2 |                 6220                  5310                  2302                  4A00                  8120
          |             1.66e+07               5015792               5097085               7391950               2105043
          | 
-       3 |                heath               housing            investment       recreatnleisure        transportation
+       3 |                 6230                  7210                  4A00                  8120                  813A
          |              6885075               2525717               4004878               2696992               1565821
          | 
-       4 |                heath               housing            investment       recreatnleisure        transportation
+       4 |                 S007                  2301                  2303                  813A                  4200
          |              5056513               2325006               3591396               1979597               1281710
          | 
-       5 |                heath               housing            investment       recreatnleisure        transportation
+       5 |                 4A00                  561A                  5415                  6100                  8111
          |              3798389               2101823               2472199               1882415               1255343
          | 
-       6 |                heath               housing            investment       recreatnleisure        transportation
+       6 |                 5240                  2303                  4200                  8111                  5240
          |              2427708               1958131               2086811               1586240              989094.6
          | 
-       7 |                heath               housing            investment       recreatnleisure        transportation
+       7 |                 561A                  52A0                  561A                  71A0                  4850
          |              1698525               1120413               1411428               1510406              977338.2
          | 
-       8 |                heath               housing            investment       recreatnleisure        transportation
+       8 |                 4200                  2211                  5413                  5170                  8140
          |              1234107               1024078               1282558               1463065              843242.9
          | 
-       9 |                heath               housing            investment       recreatnleisure        transportation
+       9 |                 7220                  4200                  4840                  561A                  561A
          |             807259.4              869833.1               1007560               1292980              839591.8
          | 
-      10 |                heath               housing            investment       recreatnleisure        transportation
+      10 |                 3254                  S002                  2130                  8140                  336A
          |             802297.7              774152.5              993405.8               1068100                520556
          | 
-      11 |                heath               housing            investment       recreatnleisure        transportation
+      11 |                 52A0                  4840                  3399                  4200                  52A0
          |             661445.5              734679.1              725030.5               1014234              520241.2
          | 
-      12 |                heath               housing            investment       recreatnleisure        transportation
+      12 |                 5416                  7220                  52A0                  3399                  2303
          |               606699              669571.5              724842.1              936638.5              444369.6
          | 
-      13 |                heath               housing            investment       recreatnleisure        transportation
+      13 |                 3391                  5240                  7220                  7130                  811A
          |             593441.3              616452.3              596428.1              905484.1              439347.5
          | 
-      14 |                heath               housing            investment       recreatnleisure        transportation
+      14 |                 5613                  5413                  3270                  S007                  4840
          |             576900.6              612011.8              547486.9              831694.3              420623.9
          | 
-      15 |                heath               housing            investment       recreatnleisure        transportation
+      15 |                 2303                  S001                  336A                  52A0                  4810
          |             576713.7              576209.8              527778.4              620894.3              351923.4
          | 
-      16 |                heath               housing            investment       recreatnleisure        transportation
+      16 |                 2301                  5620                  5310                  811A                  3361
          |             526614.2                560788                524178              568409.9              346975.6
          | 
-      17 |                heath               housing            investment       recreatnleisure        transportation
+      17 |                 5310                  3370                  5412                  6220                  2301
          |             524715.8              500918.3              519036.8              555967.3              311263.5
          | 
-      18 |                heath               housing            investment       recreatnleisure        transportation
+      18 |                 5412                  2213                  332B                  5120                  7220
          |             497677.3              488633.3              518276.2              543995.6              291924.8
          | 
-      19 |                heath               housing            investment       recreatnleisure        transportation
+      19 |                 5411                  S007                  3210                  5111                  813B
          |             469860.8              435124.6              493786.1              518578.7              277838.1
          | 
-      20 |                heath               housing            investment       recreatnleisure        transportation
+      20 |                 4840                  5411                  3370                  2303                  48A0
          |             396869.2              431917.1              480455.3              506955.5              241043.8
          | 
-      21 |                heath               housing            investment       recreatnleisure        transportation
+      21 |                 5415                  5613                  5111                  2301                  5412
          |             327660.4              388044.7                475180              500629.8              199437.8
          | 
-      22 |                heath               housing            investment       recreatnleisure        transportation
+      22 |                 S001                  8120                  5411                  7220                  5613
          |             298169.2              386097.2              470430.4                498931              197688.8
          | 
-      23 |                heath               housing            investment       recreatnleisure        transportation
+      23 |                 3399                  5412                  5416                  5413                  4920
          |             294693.4              308257.6              453583.9              461726.7              194378.2
          | 
-      24 |                heath               housing            investment       recreatnleisure        transportation
+      24 |                 5170                  3210                  3361                  5412                  3240
          |             279122.3              280647.4              373952.6              447275.2              193368.6
          | 
-      25 |                heath               housing            investment       recreatnleisure        transportation
+      25 |                 3110                  8111                  3260                  4810                  5411
          |             271266.9              263701.5              359829.7                432697              190234.3
          | 
-      26 |                heath               housing            investment       recreatnleisure        transportation
+      26 |                 3230                  813A                  5170                  4840                  3260
          |             269776.6              246333.5              357346.8              420408.4              187689.7
          | 
-      27 |                heath               housing            investment       recreatnleisure        transportation
+      27 |                 5413                  3399                  5613                  5416                  5415
          |             261072.5              243063.3              341890.9              407122.3              187139.4
          | 
-      28 |                heath               housing            investment       recreatnleisure        transportation
+      28 |                 3251                  5416                  3331                  3391                  5413
          |               221862              242610.9              315065.9              363664.3              185617.8
          | 
-      29 |                heath               housing            investment       recreatnleisure        transportation
+      29 |                 7210                  5415                  5419                  813B                  332B
          |             215057.9              240683.8              309045.9              357329.4              184865.4
          | 
-      30 |                heath               housing            investment       recreatnleisure        transportation
+      30 |                 4920                  71A0                  3323                  5613                  5416
          |             203988.5              214448.2                307510              332576.3              179036.7
          | 
-      31 |                heath               housing            investment       recreatnleisure        transportation
+      31 |                 71A0                  3260                  5240                  7210                  3399
          |             198366.3              214231.1              276160.7              322278.3                158338
          | 
-      32 |                heath               housing            investment       recreatnleisure        transportation
+      32 |                 3260                  48A0                  7210                  5190                  S001
          |             186438.4              204304.5                252576                322223              142594.5
          | 
-      33 |                heath               housing            investment       recreatnleisure        transportation
+      33 |                 4850                  5170                  4920                  5240                  71A0
          |             185376.3              203660.4              248626.4              312248.8              138604.8
          | 
-      34 |                heath               housing            investment       recreatnleisure        transportation
+      34 |                 8120                  4920                  3332                  48A0                  S002
          |             184326.2                201472              246592.9              294259.2              135480.2
          | 
-      35 |                heath               housing            investment       recreatnleisure        transportation
+      35 |                 5230                  5419                  3391                  3230                  5310
          |             163180.2                200167              240960.6              285952.3                132892
          | 
-      36 |                heath               housing            investment       recreatnleisure        transportation
+      36 |                 5418                  332B                  48A0                  S002                  3230
          |             162897.5              189540.6              239158.9              282769.2              129455.7
          | 
-      37 |                heath               housing            investment       recreatnleisure        transportation
+      37 |                 5419                  3270                  331A                  5415                  5230
          |             160930.1              181469.5              237543.3              271106.5              123816.8
          | 
-      38 |                heath               housing            investment       recreatnleisure        transportation
+      38 |                 48A0                  3230                  3339                  5419                  5170
          |             157341.6              178131.7                232900              269217.1              118513.4
          | 
-      39 |                heath               housing            investment       recreatnleisure        transportation
+      39 |                 3256                  2212                  3364                  5411                  532A
          |             157303.4              169043.9              232468.5              263884.5              111353.6
          | 
-      40 |                heath               housing            investment       recreatnleisure        transportation
+      40 |                 5111                  811A                  3230                  5310                  5419
          |             156903.6              153674.1              230150.6              262620.7              104295.1
          | 
-      41 |                heath               housing            investment       recreatnleisure        transportation
+      41 |                 2211                  5418                  71A0                  4920                  4930
          |             148015.1              139712.7                230106              242183.8              97621.97
          | 
-      42 |                heath               housing            investment       recreatnleisure        transportation
+      42 |                 5417                  4850                  5414                  6230                  2130
          |             147133.1              138262.9              228377.8              230318.3              96804.17
          | 
-      43 |                heath               housing            investment       recreatnleisure        transportation
+      43 |                 811A                  3130                  5418                  S001                  S007
          |             136362.1                135273              209266.9              222122.3              96095.93
          | 
-      44 |                heath               housing            investment       recreatnleisure        transportation
+      44 |                 5151                  3140                  S001                  5151                  7210
          |               131698              132989.1                206790              218796.6              92556.94
          | 
-      45 |                heath               housing            investment       recreatnleisure        transportation
+      45 |                 8111                  4820                  S007                  5418                  5418
          |             123391.7              126590.4              206431.5              215399.2              92224.07
          | 
-      46 |                heath               housing            investment       recreatnleisure        transportation
+      46 |                 6240                  8140                  5417                  3364                  5321
          |             121406.8              126548.3              196346.6              187791.5              86407.29
          | 
-      47 |                heath               housing            investment       recreatnleisure        transportation
+      47 |                 4930                  5230                  3334                  5230                  5111
          |             116804.7              126133.6              186446.7              168259.9               85339.3
          | 
-      48 |                heath               housing            investment       recreatnleisure        transportation
+      48 |                 332B                  5111                  3345                  1110                  4820
          |             112406.4                120936              173237.9              157959.4               81130.5
          | 
-      49 |                heath               housing            investment       recreatnleisure        transportation
+      49 |                 5620                  4930                  5151                  332B                  331A
          |             107808.6              117395.4              172130.9              153420.1              81059.28
          | 
-      50 |                heath               housing            investment       recreatnleisure        transportation
+      50 |                 5615                  5151                  3351                  5414                  5615
          |             98756.97              112582.9              169784.2              140922.9               79836.6
          | 
-      51 |                heath               housing            investment       recreatnleisure        transportation
+      51 |                 3270                  5414                  336B                  5152                  3270
          |             98672.37              107093.8              165009.4                139106              79669.51
          | 
-      52 |                heath               housing            investment       recreatnleisure        transportation
+      52 |                 1120                  1110                  3341                  3260                  5151
          |             97021.36              105448.4              164272.1              130904.9               79523.5
          | 
-      53 |                heath               housing            investment       recreatnleisure        transportation
+      53 |                 S002                  2121                  5230                  5417                  2211
          |             96669.75              99133.23              159554.5              128645.7              77225.29
          | 
-      54 |                heath               housing            investment       recreatnleisure        transportation
+      54 |                 3252                  5615                  4930                  4930                  2110
          |             95921.03              96174.34                152005              125468.6              73484.72
          | 
-      55 |                heath               housing            investment       recreatnleisure        transportation
+      55 |                 1110                  3323                  3335                  334A                  6100
          |             95604.31              94227.44              148693.9              125313.1               68620.2
          | 
-      56 |                heath               housing            investment       recreatnleisure        transportation
+      56 |                 6100                  336A                  2211                  4850                  5417
          |             90492.19              90501.78              145987.2              123001.7              61524.09
          | 
-      57 |                heath               housing            investment       recreatnleisure        transportation
+      57 |                 3341                  813B                  8111                  336A                  5414
          |             88484.84              89298.76              144662.6              121197.3              61328.36
          | 
-      58 |                heath               housing            investment       recreatnleisure        transportation
+      58 |                 5414                  3361                  811A                  336B                  3370
          |             86337.41              83003.58                138233              114630.9               54689.1
          | 
-      59 |                heath               housing            investment       recreatnleisure        transportation
+      59 |                 3370                  3351                  4850                  1120                  3323
          |             85513.59              81851.96              131124.3                111800              54165.17
          | 
-      60 |                heath               housing            investment       recreatnleisure        transportation
+      60 |                 3222                  5417                  334A                  3341                  3210
          |              79515.1              80774.09              123498.6              99753.37              53080.18
          | 
-      61 |                heath               housing            investment       recreatnleisure        transportation
+      61 |                 3361                  3221                  4820                  2211                  3341
          |             77866.88              78721.61              115444.8              95251.68              51902.73
          | 
-      62 |                heath               housing            investment       recreatnleisure        transportation
+      62 |                 3259                  3251                  4810                  5615                  3332
          |             76711.46              74558.31              112268.4              90021.56              47031.15
          | 
-      63 |                heath               housing            investment       recreatnleisure        transportation
+      63 |                 4810                  3222                  3359                  3110                  3251
          |             69817.34              70590.93                109958                 88079               46817.7
          | 
-      64 |                heath               housing            investment       recreatnleisure        transportation
+      64 |                 3210                  331A                  1130                  3270                  3339
          |             68973.04              69893.91                109576              86832.18              45956.29
          | 
-      65 |                heath               housing            investment       recreatnleisure        transportation
+      65 |                 336A                  4810                  1110                  3370                  336B
          |             68590.54              69337.92              105141.5              83097.81              45541.69
          | 
-      66 |                heath               housing            investment       recreatnleisure        transportation
+      66 |                 3221                  3341                  2123                  3361                  5620
          |             67534.53              67042.48              102775.1              78686.29              43785.86
          | 
-      67 |                heath               housing            investment       recreatnleisure        transportation
+      67 |                 813B                  6100                  331B                  4830                  3364
          |             61918.11              63193.26              90754.56              73824.42              42290.08
          | 
-      68 |                heath               housing            investment       recreatnleisure        transportation
+      68 |                 5190                  3332                  5620                  3345                  3315
          |             56586.78              62658.85              90561.33              73695.31              38344.45
          | 
-      69 |                heath               housing            investment       recreatnleisure        transportation
+      69 |                 3345                  3391                  3336                  2213                  3335
          |             55386.19              62127.47              86839.92              73620.33              37347.34
          | 
-      70 |                heath               housing            investment       recreatnleisure        transportation
+      70 |                 3332                  3352                  S002                  3210                  5324
          |             55283.05              60462.95              84287.57              70173.33              37265.74
          | 
-      71 |                heath               housing            investment       recreatnleisure        transportation
+      71 |                 4820                  1130                  3251                  5620                  2213
          |             55213.82              60322.67              83045.83              68430.62              28557.69
          | 
-      72 |                heath               housing            investment       recreatnleisure        transportation
+      72 |                 5120                  3359                  813B                  5180                  331B
          |             54931.74              57965.18              82325.88              64576.78              28421.78
          | 
-      73 |                heath               housing            investment       recreatnleisure        transportation
+      73 |                 5321                  3331                  3315                  5112                  3331
          |             53722.29              57256.93              81180.02              63586.09              27829.67
          | 
-      74 |                heath               housing            investment       recreatnleisure        transportation
+      74 |                 5500                  3240                  5112                  3323                  3130
          |              52727.9              51869.78              78081.55              56577.36              27789.74
          | 
-      75 |                heath               housing            investment       recreatnleisure        transportation
+      75 |                 7130                  2130                  3333                  331A                  5120
          |             52635.05              50754.08              76854.22              52183.06              27346.61
          | 
-      76 |                heath               housing            investment       recreatnleisure        transportation
+      76 |                 3130                  3339                  8120                  3332                  3345
          |             45040.75              48023.25              75802.85              50756.45              27106.37
          | 
-      77 |                heath               housing            investment       recreatnleisure        transportation
+      77 |                 2213                  3252                  5190                  3221                  5500
          |             41689.73              47611.81              75416.62               48441.1              27076.09
          | 
-      78 |                heath               housing            investment       recreatnleisure        transportation
+      78 |                 3255                  3353                  3353                  5321                  5190
          |             40924.43              45474.25              74362.89              46783.79              26006.56
          | 
-      79 |                heath               housing            investment       recreatnleisure        transportation
+      79 |                 3240                  3254                  3130                  532A                  3140
          |             38761.21              44844.84              72099.46              44945.44              25073.34
          | 
-      80 |                heath               housing            investment       recreatnleisure        transportation
+      80 |                 331A                  336B                  3324                  3222                  3221
          |             38511.17              44828.85              68433.36              37486.12               24882.5
          | 
-      81 |                heath               housing            investment       recreatnleisure        transportation
+      81 |                 5152                  3110                  3140                  3251                  3222
          |             38260.19              40334.77              66597.55              37456.59              24046.42
          | 
-      82 |                heath               housing            investment       recreatnleisure        transportation
+      82 |                 3339                  5120                  3222                  4820                  334A
          |             36929.76              39540.18              66120.99              36761.98              23871.63
          | 
-      83 |                heath               housing            investment       recreatnleisure        transportation
+      83 |                 3140                  3345                  5615                  3130                  3252
          |             36910.16              39302.52              63109.27              34338.93              23486.07
          | 
-      84 |                heath               housing            investment       recreatnleisure        transportation
+      84 |                 3323                  7130                  3221                  3339                  3359
          |             35608.72              39299.93              62624.76              33670.08               22487.1
          | 
-      85 |                heath               housing            investment       recreatnleisure        transportation
+      85 |                 5250                  4860                  6100                  3150                  3160
          |             35000.55              36586.34              61338.84              33588.04              21959.15
          | 
-      86 |                heath               housing            investment       recreatnleisure        transportation
+      86 |                 334A                  2110                  5120                  1130                  3110
          |             31462.31              35644.77              60427.79              32646.95              21725.62
          | 
-      87 |                heath               housing            investment       recreatnleisure        transportation
+      87 |                 532A                  5321                  3352                  1150                  1110
          |             30989.71               34578.5              57030.94              32339.92               20815.2
          | 
-      88 |                heath               housing            investment       recreatnleisure        transportation
+      88 |                 5180                  5190                  3321                  3359                  7130
          |             26800.25              33818.86              56511.05              30682.84               20084.6
          | 
-      89 |                heath               housing            investment       recreatnleisure        transportation
+      89 |                 336B                  3334                  5500                  3331                  3150
          |             25735.43              33746.08              54736.69              29489.76              20055.44
          | 
-      90 |                heath               housing            investment       recreatnleisure        transportation
+      90 |                 3331                  3335                  332A                  3254                  5250
          |             24690.08              33228.88              50923.03              28988.71               19951.2
          | 
-      91 |                heath               housing            investment       recreatnleisure        transportation
+      91 |                 3333                  2123                  3252                  3140                  2212
          |             23976.03              31450.14              50312.16              28767.48              19703.25
          | 
-      92 |                heath               housing            investment       recreatnleisure        transportation
+      92 |                 2212                  3256                  3240                  5500                  3324
          |             23748.36               31020.7              49202.96              28286.37              18952.24
          | 
-      93 |                heath               housing            investment       recreatnleisure        transportation
+      93 |                 3351                  3150                  5152                  331B                  3351
          |             23122.63               30647.1              45535.21              27522.55              18727.38
          | 
-      94 |                heath               housing            investment       recreatnleisure        transportation
+      94 |                 1130                  331B                  5321                  3351                  3321
          |             22549.43              30001.14              45352.07              26643.54              17873.41
          | 
-      95 |                heath               housing            investment       recreatnleisure        transportation
+      95 |                 2123                  334A                  7130                  3335                  5152
          |              22493.6              29049.92              43892.14               26281.7              17838.77
          | 
-      96 |                heath               housing            investment       recreatnleisure        transportation
+      96 |                 3335                  5500                  5324                  5324                  4860
          |             22404.88              28703.69              43247.16              22629.56              16905.72
          | 
-      97 |                heath               housing            investment       recreatnleisure        transportation
+      97 |                 3150                  5152                  3259                  3252                  3334
          |             22191.08              28436.06              41315.56              22246.83              16837.84
          | 
-      98 |                heath               housing            investment       recreatnleisure        transportation
+      98 |                 5324                  3324                  3255                  332A                  3353
          |             22057.61              27598.97               40473.8              21839.18              15628.32
          | 
-      99 |                heath               housing            investment       recreatnleisure        transportation
+      99 |                 3253                  2302                  3110                  6210                  5180
          |             20133.44              25630.39              39475.23              21572.48              15053.35
          | 
-     100 |                heath               housing            investment       recreatnleisure        transportation
+     100 |                 3121                  532A                  2212                  3353                  1130
          |             19289.98              25611.51              31410.79              21052.96              14348.67
          | 
-     101 |                heath               housing            investment       recreatnleisure        transportation
+     101 |                 2130                  3259                  3322                  3259                  2121
          |             19231.05              25000.36              30823.83              19942.34              14298.99
          | 
-     102 |                heath               housing            investment       recreatnleisure        transportation
+     102 |                 3364                  332A                  5180                  3333                  3336
          |             19007.33              22782.42               30768.6              19683.57              14216.44
          | 
-     103 |                heath               housing            investment       recreatnleisure        transportation
+     103 |                 3324                  3336                  2121                  3240                  5330
          |              18757.4               20341.7              27675.79               19151.3               14184.6
          | 
-     104 |                heath               housing            investment       recreatnleisure        transportation
+     104 |                 3353                  3333                  1150                  2212                  3259
          |             18487.89              20003.32              26982.34              18530.27              13335.35
          | 
-     105 |                heath               housing            investment       recreatnleisure        transportation
+     105 |                 331B                  5180                  3150                  3315                  3333
          |             17080.64              19891.99              26171.92              17913.27              13204.96
          | 
-     106 |                heath               housing            investment       recreatnleisure        transportation
+     106 |                 2121                  1120                  2213                  3334                  4830
          |             15741.69              19441.53              26096.62              17733.54              12405.44
          | 
-     107 |                heath               housing            investment       recreatnleisure        transportation
+     107 |                 5112                  5324                  2122                  3324                  3391
          |             15044.06              19373.68              25949.84              17361.67              11969.21
          | 
-     108 |                heath               housing            investment       recreatnleisure        transportation
+     108 |                 3334                  1150                  2110                  3256                  2123
          |             14812.33              18792.84              23217.68              17179.45              11874.59
          | 
-     109 |                heath               housing            investment       recreatnleisure        transportation
+     109 |                 3359                  3255                  3160                  2130                  3322
          |              14785.8              18657.92              22532.48              15814.84              11338.32
          | 
-     110 |                heath               housing            investment       recreatnleisure        transportation
+     110 |                 1150                  3315                  1120                  3321                  2122
          |             14015.14              18600.88              22446.48              15623.14              10719.05
          | 
-     111 |                heath               housing            investment       recreatnleisure        transportation
+     111 |                 2122                  3364                  6210                  2121                  3255
          |              11984.1              18097.37              20306.12              14902.15              10508.61
          | 
-     112 |                heath               housing            investment       recreatnleisure        transportation
+     112 |                 3315                  3321                  532A                  2123                  5112
          |             11953.44              16284.96              20223.58              13250.73               10469.3
          | 
-     113 |                heath               housing            investment       recreatnleisure        transportation
+     113 |                 332A                  6220                  3256                  3322                  3256
          |             11574.42              15291.02              17169.07              11657.52              10057.74
          | 
-     114 |                heath               housing            investment       recreatnleisure        transportation
+     114 |                 S006                  3322                  3254                  3352                  332A
          |             11411.74              15219.71              16412.92              11631.01               9651.26
          | 
-     115 |                heath               housing            investment       recreatnleisure        transportation
+     115 |                 2110                  5112                  S006                  5161                  3352
          |             10727.96              12800.65              14550.34              10411.25               9641.57
          | 
-     116 |                heath               housing            investment       recreatnleisure        transportation
+     116 |                 3321                  2122                  6220                  3336                  1120
          |               9732.3              11771.57              14050.48              10394.83               9120.91
          | 
-     117 |                heath               housing            investment       recreatnleisure        transportation
+     117 |                 5330                  S006                  4830                  2122                  6210
          |              8863.91              10235.28              11983.39               8815.26               7921.84
          | 
-     118 |                heath               housing            investment       recreatnleisure        transportation
+     118 |                 3322                  6210                  5330                  3255                  2302
          |              7093.01               9457.28              9113.811                8757.8               6808.13
          | 
-     119 |                heath               housing            investment       recreatnleisure        transportation
+     119 |                 3352                  3160                  4860                  3160                  S006
          |              6912.75               8091.29               8785.78              8517.811               5940.04
          | 
-     120 |                heath               housing            investment       recreatnleisure        transportation
+     120 |                 4860                  5330                  3253                  S006                  6220
          |              6909.27               8025.48                7447.7              8439.479                5125.3
          | 
-     121 |                heath               housing            investment       recreatnleisure        transportation
+     121 |                 3336                  3253                  S005                  2110                  3254
          |              6431.17               6480.34               4355.21               7932.43               4935.99
          | 
-     122 |                heath               housing            investment       recreatnleisure        transportation
+     122 |                 4830                  4830                  813A                  2302                  1150
          |              5916.37               6282.27                4310.4               7784.09               3389.11
          | 
-     123 |                heath               housing            investment       recreatnleisure        transportation
+     123 |                 3160                  5250                  6240                  5330                  3253
          |              5739.14               5937.17               3673.31               7468.32               2530.86
          | 
-     124 |                heath               housing            investment       recreatnleisure        transportation
+     124 |                 5161                  6230                  5250                  5250                  1140
          |              4985.04                4031.4               2803.86               7208.76               1587.06
          | 
-     125 |                heath               housing            investment       recreatnleisure        transportation
+     125 |                 1140                  6240                  6230                  1140                  6240
          |              4449.74               3586.65               2744.71               7159.51               1296.44
          | 
-     126 |                heath               housing            investment       recreatnleisure                      
+     126 |                 S005                  3121                  1140                  4860                      
          |              4055.94               3433.88                2232.5               4218.39                      
          | 
-     127 |                heath               housing            investment       recreatnleisure                      
+     127 |                 2302                  1140                  3121                  3121                      
          |               3931.9               2601.95                1801.4               3251.86                      
          | 
-     128 |                heath               housing            investment       recreatnleisure                      
+     128 |                 813A                  S005                  5161                  S005                      
          |               3460.8               1976.99               1610.78               2395.39                      
          | 
-     129 |                                    housing                             recreatnleisure                      
+     129 |                                       5161                                        3253                      
          |                                    1454.42                                     1412.99                      
 -----------------------------------------------------------------------------------------------------------------------
 
@@ -867,5 +867,5 @@ end of do-file
       name:  <unnamed>
        log:  /Users/rauljara/Documents/Work/ILS Research/Work for Rose/Input_Output/CPS 07-09/DistributionOfWorkers.txt
   log type:  text
- closed on:  22 Apr 2010, 09:27:36
+ closed on:  22 Apr 2010, 09:41:16
 ---------------------------------------------------------------------------------------------------------------------------------------------

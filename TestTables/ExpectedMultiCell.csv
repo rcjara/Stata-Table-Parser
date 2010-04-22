@@ -1,4 +1,4 @@
-". tabdisp rank which_category, cell(which_category num_workers) cellwidth(20) "
+". tabdisp rank which_category, cell(bea_sum num_workers) cellwidth(20) "
 "","","","","","which_category","","","","",""
 "rank","businessservs","","clothingperscare","","education","","exports","","food","","gov","","heath","","housing","","investment","","recreatnleisure","","transportation",""
 "1","52A0","3855636","4A00","8558629","6100","2.83e+07","4200","1794717","7220","2.02e+07","S007","1.09e+07","6210","1.88e+07","4A00","6947562","2301","6290840","6240","7999165","4A00","5355128"

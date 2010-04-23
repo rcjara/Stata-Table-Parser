@@ -9,7 +9,7 @@ class StataTableParser
     @lines = File.read(filename).split(MAC_WIN_UNIX_LINE_BREAKS)
   end
   
-  def csv_out(filename = nil)
+  def csv_out(filename = nil, options = {})
     unless filename
       filename = @filename.gsub(/\.txt|\.log/, ".csv")
     end

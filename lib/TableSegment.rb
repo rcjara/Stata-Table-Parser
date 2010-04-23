@@ -45,11 +45,16 @@ class TableSegment
   
   def grab_row(row_num)
     row_array = []
-    line = @lines[start_of_rows + row_num]
     cols.each_cons(2) do |start, finish|
-      row_array << line[start...finish].strip
+      row_array << (0...num_cells).collect do |offset|
+        line = @lines[rows[row_num] + offset]
+        line[start...finish].strip
+      end
     end
-    row_array << line[cols.last..-1].strip
+    row_array << (0...num_cells).collect do |offset|
+      line = @lines[rows[row_num] + offset]
+      line[cols.last..-1].strip
+    end
     row_array
   end
   
@@ -92,19 +97,36 @@ class TableSegment
   def rows
     return @rows if @rows
     found_end = false
-    @rows = @lines[start_of_rows..-1].select do |line|
+    @num_cells = 1
+    cur_num_cells = 0
+    @rows = (start_of_rows...@lines.length).select do |line_num|
+      line = @lines[line_num]
+      has_var_name = if line.one_match?(/^\s*?[\S^\|]+?\s*?\|+?/)
+        cur_num_cells = 0
+        true
+      else
+        cur_num_cells += 1
+        @num_cells = cur_num_cells if cur_num_cells > @num_cells
+        false
+      end
       found_end ||= line.one_match?(HORIZONTAL_BORDER)
-      !found_end
+      !found_end && has_var_name
     end
     @rows
+  end
+  
+  def num_cells
+    return @num_cells if @num_cells
+    rows
+    @num_cells
   end
   
   def row_names
     return @row_names if @row_names
      
-     column_border = start_of_cols - 2
-    @row_names = @lines[start_of_rows...(start_of_rows + num_rows)].collect do |line|
-      line[0..column_border].strip
+    column_border = start_of_cols - 2
+    @row_names = rows.collect do |line_num|
+      @lines[line_num][0..column_border].strip
     end
     
     @row_names

@@ -23,14 +23,14 @@ class StataTable
     @as_array << [@command]
     
     first_line = []
-    (num_cols / 2).times { first_line << ""}
-    first_line << col_var_name
-    (num_cols - first_line.length).times {first_line << "" }
+    (num_cols / 2).times { first_line << create_intersection("") }
+    first_line << create_intersection(col_var_name)
+    (num_cols - first_line.length).times { first_line << create_intersection("") }
     @as_array << first_line
     
     second_line = []
     second_line << row_var_name
-    second_line << col_names
+    second_line << col_names.collect{|col_name| create_intersection(col_name) }
     @as_array << second_line
     
     (0...num_rows).each do |i|
@@ -61,6 +61,11 @@ class StataTable
     
     @num_rows
   end
+  
+  def num_cells
+    segments.first.num_cells
+  end
+  
   
   def num_segments
     segments.length
@@ -121,5 +126,10 @@ class StataTable
     @segments
   end
   
+  def create_intersection(text)
+    intersection_array = [text]
+    (num_cells - 1).times { intersection_array << "" }
+    intersection_array
+  end
   
 end

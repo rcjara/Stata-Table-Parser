@@ -23,7 +23,7 @@ describe StataTableParser do
       @parser = StataTableParser.new(File.dirname(__FILE__) + "/../TestTables/OneDoubleWideTable.txt")
     end
     
-    it "should be able to fine the right number of tables in the file" do
+    it "should be able to find the right number of tables in the file" do
       @parser.num_tables.should == 1
     end
     
@@ -54,6 +54,10 @@ describe StataTableParser do
     it "should have the proper row var name" do
       @parser.first_table.row_var_name.should == "bea67"
     end
+    
+    it "should have the right number of cells" do
+      @parser.first_table.num_cells.should == 1
+    end
   end
   
   context "OneSimpleTable" do
@@ -61,7 +65,7 @@ describe StataTableParser do
       @parser = StataTableParser.new(File.dirname(__FILE__) + "/../TestTables/OneSimpleTable.txt")
     end
     
-    it "should be able to fine the right number of tables in the file" do
+    it "should be able to find the right number of tables in the file" do
       @parser.num_tables.should == 1
     end
     
@@ -84,6 +88,10 @@ describe StataTableParser do
     it "should have the proper row names" do
       @parser.first_table.row_names.should == one_simple_table_row_names
     end
+    
+    it "should have the right number of cells" do
+      @parser.first_table.num_cells.should == 1
+    end
   end
   
   context "SmallWideTable" do
@@ -96,7 +104,7 @@ describe StataTableParser do
       File.read(File.dirname(__FILE__) + "/../TestTables/output.csv").should == File.read(File.dirname(__FILE__) + "/../TestTables/SmallWideTable.csv")
     end
     
-    it "should be able to fine the right number of tables in the file" do
+    it "should be able to find the right number of tables in the file" do
       @parser.num_tables.should == 1
     end
     
@@ -116,31 +124,35 @@ describe StataTableParser do
       @parser.first_table.col_names.should == one_double_wide_table_col_names
     end
     
-    context "multicell table, wide" do
-      before(:each) do
-        @parser = StataTableParser.new(File.dirname(__FILE__) + "/../TestTables/MultiCell.txt", {:wide_cells => true} )
-      end
-      
-      it "should be able to fine the right number of tables in the file" do
-        @parser.num_tables.should == 1
-      end
+    it "should have the right number of cells" do
+      @parser.first_table.num_cells.should == 1
+    end
+  end
+    
+  context "multicell table, wide" do
+    before(:each) do
+      @parser = StataTableParser.new(File.dirname(__FILE__) + "/../TestTables/MultiCell.txt")
+    end
+    
+    it "should be able to find the right number of tables in the file" do
+      @parser.num_tables.should == 1
+    end
 
-      it "should have the right number of columns" do
-        @parser.first_table.num_cols.should == 11
-      end
+    it "should have the right number of columns" do
+      @parser.first_table.num_cols.should == 11
+    end
 
-      it "should have the right number of rows" do
-        @parser.first_table.num_rows.should == 129
-      end
-      
-      it "should have the right number of cells for the row column interactions" do
-        @parser.first_table.num_cells.should == 2
-      end
-      
-      it "should get the expected output" do
-        @parser.csv_out(File.dirname(__FILE__) + "/../TestTables/MultiCellWideOut.csv")
-        File.read(File.dirname(__FILE__) + "/../TestTables/MultiCellWideOut.csv").should == File.read(File.dirname(__FILE__) + "/../TestTables/ExpectedMultiCell.csv")
-      end
+    it "should have the right number of rows" do
+      @parser.first_table.num_rows.should == 129
+    end
+    
+    it "should have the right number of cells for the row column interactions" do
+      @parser.first_table.num_cells.should == 2
+    end
+    
+    it "should get the expected output" do
+      @parser.csv_out(File.dirname(__FILE__) + "/../TestTables/MultiCellWideOut.csv", {:wide_cells => true} )
+      File.read(File.dirname(__FILE__) + "/../TestTables/MultiCellWideOut.csv").should == File.read(File.dirname(__FILE__) + "/../TestTables/ExpectedMultiCell.csv")
     end
     
   end

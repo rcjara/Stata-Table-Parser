@@ -101,7 +101,7 @@ class TableSegment
     cur_num_cells = 0
     @rows = (start_of_rows...@lines.length).select do |line_num|
       line = @lines[line_num]
-      has_var_name = if line.one_match?(/^\s*?[\S^\|]+?\s*?\|+?/)
+      has_var_name = if line.one_match?(/^\s*?\S[^\|]+?\s*?\|+?/)
         cur_num_cells = 0
         true
       else

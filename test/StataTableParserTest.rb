@@ -157,6 +157,26 @@ describe StataTableParser do
     
   end
   
-  
+  context "very simple table" do
+    before(:each) do
+      @parser = StataTableParser.new(File.dirname(__FILE__) + "/../TestTables/VerySimpleTable.txt")
+    end
+    
+     it "should be able to find the right number of tables in the file" do
+        @parser.num_tables.should == 1
+      end
+
+      it "should have the right number of columns" do
+        @parser.first_table.num_cols.should == 5
+      end
+
+      it "should have the right number of rows" do
+        @parser.first_table.num_rows.should == 11
+      end
+
+      it "should have the right number of cells for the row column interactions" do
+        @parser.first_table.num_cells.should == 1
+      end
+  end
   
 end

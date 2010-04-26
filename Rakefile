@@ -4,7 +4,7 @@ require 'rake/gempackagetask'
 
 spec = Gem::Specification.new do |s| 
   s.name = "StataTableParser"
-  s.version = "0.0.2"
+  s.version = "0.0.3"
   s.author = "Raul Jara"
   s.email = "raul.c.jara@gmail.com"
   s.platform = Gem::Platform::RUBY

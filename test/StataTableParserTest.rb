@@ -127,6 +127,21 @@ describe StataTableParser do
     it "should have the right number of cells" do
       @parser.first_table.num_cells.should == 1
     end
+    
+    it "should be able to output into excel xml" do
+      @parser.xml_out(File.dirname(__FILE__) + "/../TestTables/SmallWideTableBasicOut.xml")
+      File.read(File.dirname(__FILE__) + "/../TestTables/SmallWideTableBasicOut.xml").should == File.read(File.dirname(__FILE__) + "/../TestTables/SmallWideTableBasic.xml")
+    end
+    
+    it "should be able to output into excel xml with row totals" do
+      @parser.xml_out(File.dirname(__FILE__) + "/../TestTables/SmallWideTableRowTotalsOut.xml")
+      File.read(File.dirname(__FILE__) + "/../TestTables/SmallWideTableRowTotalsOut.xml").should == File.read(File.dirname(__FILE__) + "/../TestTables/SmallWideTableRowTotals.xml")
+    end
+    
+    it "should be able to output into an excel xml with percents" do
+      @parser.xml_out(File.dirname(__FILE__) + "/../TestTables/SmallWideTablePercentsByRowOut.xml")
+      File.read(File.dirname(__FILE__) + "/../TestTables/SmallWideTablePercentsByRowOut.xml").should == File.read(File.dirname(__FILE__) + "/../TestTables/SmallWideTablePercentByRow.xml")
+    end
   end
     
   context "multicell table, wide" do

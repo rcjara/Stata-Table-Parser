@@ -1,0 +1,389 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Version>12.0</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>13560</WindowHeight>
+  <WindowWidth>21600</WindowWidth>
+  <WindowTopX>740</WindowTopX>
+  <WindowTopY>-260</WindowTopY>
+  <Date1904/>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Verdana"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s27">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s28">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s29">
+   <Borders>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s30">
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s31">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s32">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s33">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s34">
+   <Borders>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s35">
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s36">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s37">
+   <Borders/>
+   <NumberFormat ss:Format="Standard"/>
+  </Style>
+  <Style ss:ID="s38">
+   <Borders/>
+  </Style>
+  <Style ss:ID="s39">
+   <Borders/>
+   <NumberFormat ss:Format="#,##0"/>
+  </Style>
+  <Style ss:ID="s40">
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s41">
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="Standard"/>
+  </Style>
+  <Style ss:ID="s42">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s43">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="#,##0"/>
+  </Style>
+  <Style ss:ID="s44">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s45">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="Standard"/>
+  </Style>
+  <Style ss:ID="s46">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s50">
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s53">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="bea67 by occ21">
+  <Table ss:ExpandedColumnCount="24" ss:ExpandedRowCount="9" x:FullColumns="1"
+   x:FullRows="1">
+   <Row>
+    <Cell><Data ss:Type="String">. table bea67 occ21 [pw = perwt], cellwidth(10)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s50"/>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">occ21</Data></Cell>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s30"/>
+    <Cell ss:StyleID="s53"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">bea67</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">Military</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">MGRS &amp; SAL</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">LAWYERS &amp;</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">HEALTH DIA</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">ACCT &amp; OTH</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">SALES REP</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">SCI PROF &amp;</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">OTHER BUS</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">TEACHERS</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">ARTS &amp; LET</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">MGRS &amp; SAL</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">B_C SUP &amp;</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">FARM OWNER</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">HEALTH &amp; T</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">CRAFT REPA</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">PROT SERV</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">CLERICAL</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">OPERATORS</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">SALES</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">SERV WORKE</Data></Cell>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">LABORERS</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">FARM WORKE</Data></Cell>
+    <Cell ss:StyleID="s53"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">0.0</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="Number">3.271065E6</Data></Cell>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s34"/>
+    <Cell ss:StyleID="s35"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">1.0</Data></Cell>
+    <Cell ss:StyleID="s36"/>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">50526.6</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">18316.9</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">1439.48</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">6315.31</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">11388.8</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">4174.67</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">44662.5</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">3652.34</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="Number">2.284815E6</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">1223.94</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">26162.8</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">31222.9</Data></Cell>
+    <Cell ss:StyleID="s39"><Data ss:Type="Number">119481.0</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">3291.56</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">18197.2</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">26874.6</Data></Cell>
+    <Cell ss:StyleID="s40"><Data ss:Type="Number">1.255965E6</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">2.0</Data></Cell>
+    <Cell ss:StyleID="s36"/>
+    <Cell ss:StyleID="s39"><Data ss:Type="Number">170384.0</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">29944.8</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">28078.6</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">45641.7</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">13415.2</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">17384.9</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">5042.92</Data></Cell>
+    <Cell ss:StyleID="s39"><Data ss:Type="Number">60069.0</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">14387.9</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="Number">2.95615E6</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">11950.8</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">51393.6</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s39"><Data ss:Type="Number">156234.0</Data></Cell>
+    <Cell ss:StyleID="s39"><Data ss:Type="Number">349075.0</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">7397.97</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">25682.7</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">68575.69999999999</Data></Cell>
+    <Cell ss:StyleID="s40"><Data ss:Type="Number">1.682497E6</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">14.0</Data></Cell>
+    <Cell ss:StyleID="s36"/>
+    <Cell ss:StyleID="s39"><Data ss:Type="Number">540649.0</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">1320.54</Data></Cell>
+    <Cell ss:StyleID="s39"><Data ss:Type="Number">100279.0</Data></Cell>
+    <Cell ss:StyleID="s39"><Data ss:Type="Number">256293.0</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">64178.6</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">1582.66</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">20491.1</Data></Cell>
+    <Cell ss:StyleID="s39"><Data ss:Type="Number">149882.0</Data></Cell>
+    <Cell ss:StyleID="s39"><Data ss:Type="Number">277989.0</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">2753.09</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">55826.7</Data></Cell>
+    <Cell ss:StyleID="s39"><Data ss:Type="Number">560090.0</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">1277.63</Data></Cell>
+    <Cell ss:StyleID="s39"><Data ss:Type="Number">685521.0</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="Number">2.571009E6</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">66393.69999999999</Data></Cell>
+    <Cell ss:StyleID="s39"><Data ss:Type="Number">116631.0</Data></Cell>
+    <Cell ss:StyleID="s38"><Data ss:Type="Number">1.011181E6</Data></Cell>
+    <Cell ss:StyleID="s41"><Data ss:Type="Number">3925.57</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">15.0</Data></Cell>
+    <Cell ss:StyleID="s36"/>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">10891.7</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">1168.55</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">3967.59</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">2647.63</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">9862.9</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">2414.92</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">11789.9</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">12666.6</Data></Cell>
+    <Cell ss:StyleID="s39"><Data ss:Type="Number">112757.0</Data></Cell>
+    <Cell ss:StyleID="s38"/>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">2208.41</Data></Cell>
+    <Cell ss:StyleID="s37"><Data ss:Type="Number">30019.6</Data></Cell>
+    <Cell ss:StyleID="s40"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">16.0</Data></Cell>
+    <Cell ss:StyleID="s42"/>
+    <Cell ss:StyleID="s43"><Data ss:Type="Number">80515.0</Data></Cell>
+    <Cell ss:StyleID="s44"><Data ss:Type="Number">23456.0</Data></Cell>
+    <Cell ss:StyleID="s44"/>
+    <Cell ss:StyleID="s45"><Data ss:Type="Number">18692.4</Data></Cell>
+    <Cell ss:StyleID="s45"><Data ss:Type="Number">23937.2</Data></Cell>
+    <Cell ss:StyleID="s45"><Data ss:Type="Number">13303.6</Data></Cell>
+    <Cell ss:StyleID="s45"><Data ss:Type="Number">1141.81</Data></Cell>
+    <Cell ss:StyleID="s44"/>
+    <Cell ss:StyleID="s43"><Data ss:Type="Number">17880.0</Data></Cell>
+    <Cell ss:StyleID="s45"><Data ss:Type="Number">4965.869999999999</Data></Cell>
+    <Cell ss:StyleID="s43"><Data ss:Type="Number">142242.0</Data></Cell>
+    <Cell ss:StyleID="s44"/>
+    <Cell ss:StyleID="s45"><Data ss:Type="Number">16644.2</Data></Cell>
+    <Cell ss:StyleID="s43"><Data ss:Type="Number">161808.0</Data></Cell>
+    <Cell ss:StyleID="s44"/>
+    <Cell ss:StyleID="s43"><Data ss:Type="Number">193081.0</Data></Cell>
+    <Cell ss:StyleID="s44"><Data ss:Type="Number">1.928488E6</Data></Cell>
+    <Cell ss:StyleID="s44"/>
+    <Cell ss:StyleID="s45"><Data ss:Type="Number">45450.9</Data></Cell>
+    <Cell ss:StyleID="s43"><Data ss:Type="Number">181288.0</Data></Cell>
+    <Cell ss:StyleID="s46"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>0</PaperSizeIndex>
+    <HorizontalResolution>-4</HorizontalResolution>
+    <VerticalResolution>-4</VerticalResolution>
+   </Print>
+   <PageLayoutZoom>0</PageLayoutZoom>
+   <Selected/>
+   <LeftColumnVisible>11</LeftColumnVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>1</ActiveRow>
+     <ActiveCol>23</ActiveCol>
+     <RangeSelection>R2C24:R3C24</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

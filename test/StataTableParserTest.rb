@@ -134,12 +134,12 @@ describe StataTableParser do
     end
     
     it "should be able to output into excel xml with row totals" do
-      @parser.xml_out(File.dirname(__FILE__) + "/../TestTables/SmallWideTableRowTotalsOut.xml")
+      @parser.xml_out(File.dirname(__FILE__) + "/../TestTables/SmallWideTableRowTotalsOut.xml", :row_totals => true)
       File.read(File.dirname(__FILE__) + "/../TestTables/SmallWideTableRowTotalsOut.xml").should == File.read(File.dirname(__FILE__) + "/../TestTables/SmallWideTableRowTotals.xml")
     end
     
     it "should be able to output into an excel xml with percents" do
-      @parser.xml_out(File.dirname(__FILE__) + "/../TestTables/SmallWideTablePercentsByRowOut.xml")
+      @parser.xml_out(File.dirname(__FILE__) + "/../TestTables/SmallWideTablePercentsByRowOut.xml", :row_percents => true)
       File.read(File.dirname(__FILE__) + "/../TestTables/SmallWideTablePercentsByRowOut.xml").should == File.read(File.dirname(__FILE__) + "/../TestTables/SmallWideTablePercentByRow.xml")
     end
   end

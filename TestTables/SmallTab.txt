@@ -1,4 +1,4 @@
-. tab max_allwage_b
+.		tab max_allwage_b
 
 max_allwage |
          _b |      Freq.     Percent        Cum.

@@ -7,7 +7,7 @@ class TableSegment
     @lines = lines
   end
   
-  def verify!
+  def verify_table!
     start_point = nil
     end_point = nil
     num_borders = 0
@@ -30,7 +30,33 @@ class TableSegment
     @lines = @lines[start_point..end_point]
     true
   end
-  
+
+  def verify_tab!
+    start_point = nil
+    end_point = nil
+    num_borders = 0
+    @lines.each_with_index do |line, i|
+	  if start_point.nil?
+		start_point = i if line.any_match?(/\|/)
+      elsif line.one_match?(HORIZONTAL_BORDER)
+        num_borders += 1
+        if num_borders == 1
+          start_point = i
+        end
+        if num_borders == 2
+          end_point = i 
+          break
+        end
+      end
+      if line.one_match?(/^\.\ \S/) #found a new command
+        break
+      end
+    end
+    return false unless end_point
+    @lines = @lines[start_point..end_point + 1] 
+    true
+  end
+
   def height
     @lines.length
   end

@@ -112,16 +112,23 @@ class StataTable
     
     i = 0
     loop do
-      until @lines[i].one_match?(HORIZONTAL_BORDER)
+      until @lines[i].one_match?(HORIZONTAL_BORDER) | @lines[i].any_match?(/\|/)
         i += 1
         break if i >= @lines.length 
       end
       segment = TableSegment.new(@lines[i..-1])
-      break unless segment.verify!
-      @segments << segment
-      i += segment.height
-      break if i >= @lines.length 
+      if segment.verify_table!
+        @segments << segment
+	  elsif segment.verify_tab!
+	    @segments << segment
+	  else
+		break
+	  end
+	  i += segment.height
+	  break if i >= @lines.length
     end
+
+	raise "No segments found" if @segments.empty?
     
     @segments
   end

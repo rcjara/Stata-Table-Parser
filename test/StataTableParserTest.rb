@@ -10,11 +10,25 @@ describe StataTableParser do
     end
     
     it "should be able to find the right number of tables in the file" do
-      @parser.num_tables.should == 17
+      @parser.num_tables.should == 23
     end
     
     it "should be able to csv out without an error" do
       @parser.csv_out(File.dirname(__FILE__) + "/../TestTables/bigfileout.csv")
+    end
+  end
+
+  context "AltSmallTab.txt" do
+    before(:each) do
+      @parser = StataTableParser.new(File.dirname(__FILE__) + "/../TestTables/AltSmallTab.txt")
+    end
+    
+    it "should be able to find the right number of tables in the file" do
+      @parser.num_tables.should == 1
+    end
+    
+    it "should be able to csv out without an error" do
+      @parser.csv_out(File.dirname(__FILE__) + "/../TestTables/SmallTabOut.csv")
     end
   end
   

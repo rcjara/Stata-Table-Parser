@@ -6,7 +6,7 @@ class StataTable
   def initialize(lines)
     @command = lines[0]
 
-	@table_type = @command.one_match?(/table\s/)
+	@table_type = if @command.one_match?(/table\s/)
 		:table
 	elsif @command.one_match?(/(tab)(\s|ulate)/)
 		:tab

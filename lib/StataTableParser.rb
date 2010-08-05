@@ -51,6 +51,9 @@ class StataTableParser
     @tables
   end
   
+  def table_types
+    tables.collect { |table| table.table_type }
+  end
 end
 
 

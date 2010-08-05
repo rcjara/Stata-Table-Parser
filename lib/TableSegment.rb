@@ -3,6 +3,8 @@ require File.dirname(__FILE__) + '/CSVManipulations.rb'
 require File.dirname(__FILE__) + '/RegexFns.rb'
 
 class TableSegment
+  attr_reader :command
+
   def initialize(lines)
     @lines = lines
   end
@@ -28,6 +30,7 @@ class TableSegment
     end
     return false unless end_point
     @lines = @lines[start_point..end_point]
+	@command = :table
     true
   end
 
@@ -36,15 +39,13 @@ class TableSegment
     end_point = nil
     num_borders = 0
     @lines.each_with_index do |line, i|
-	  if start_point.nil?
-		start_point = i if line.any_match?(/\|/)
-      elsif line.one_match?(HORIZONTAL_BORDER)
+      if line.one_match?(HORIZONTAL_BORDER)
         num_borders += 1
         if num_borders == 1
-          start_point = i
+          start_point = i - 1
         end
         if num_borders == 2
-          end_point = i 
+          end_point = i + 1
           break
         end
       end
@@ -53,7 +54,8 @@ class TableSegment
       end
     end
     return false unless end_point
-    @lines = @lines[start_point..end_point + 1] 
+    @lines = @lines[start_point..end_point] 
+	@command = :tab
     true
   end
 

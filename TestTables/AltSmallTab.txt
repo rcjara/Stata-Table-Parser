@@ -1,4 +1,3 @@
-
 . tab max_allwage_f
 
 max_allwage |

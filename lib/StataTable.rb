@@ -1,8 +1,17 @@
 require File.dirname(__FILE__) + '/TableSegment.rb'
 
 class StataTable
+  attr_reader :table_type
+
   def initialize(lines)
     @command = lines[0]
+
+	@table_type = @command.one_match?(/table\s/)
+		:table
+	elsif @command.one_match?(/(tab)(\s|ulate)/)
+		:tab
+	end
+
     @lines = lines
   end
   

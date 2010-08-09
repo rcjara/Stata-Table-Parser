@@ -1,4 +1,5 @@
 require File.dirname(__FILE__) + '/TableSegment.rb'
+require File.dirname(__FILE__) + '/TabSegment.rb'
 
 class StataTable
   attr_reader :table_type
@@ -10,6 +11,8 @@ class StataTable
 		:table
 	elsif @command.one_match?(/(tab)(\s|ulate)/)
 		:tab
+	elsif @command.one_match?(/tabdisp/)
+		:tabdisplay
 	end
 
     @lines = lines
@@ -31,11 +34,13 @@ class StataTable
     @as_array = []
     @as_array << [@command]
     
-    first_line = []
-    (num_cols / 2).times { first_line << create_intersection("") }
-    first_line << create_intersection(col_var_name)
-    (num_cols - first_line.length).times { first_line << create_intersection("") }
-    @as_array << first_line
+	unless col_var_name.empty?
+      first_line = []
+      (num_cols / 2).times { first_line << create_intersection("") }
+      first_line << create_intersection(col_var_name)
+      (num_cols - first_line.length).times { first_line << create_intersection("") }
+      @as_array << first_line
+	end
     
     second_line = []
     second_line << row_var_name
@@ -120,16 +125,31 @@ class StataTable
     @segments = []
     
     i = 0
+
+	border = case @table_type
+	when :tab
+	  /\|/
+	else
+	  HORIZONTAL_BORDER
+	end
+
+	segment = nil
+	    
     loop do
-      until @lines[i].one_match?(HORIZONTAL_BORDER) | @lines[i].any_match?(/\|/)
+      until @lines[i].any_match?(border)
         i += 1
         break if i >= @lines.length 
       end
-      segment = TableSegment.new(@lines[i..-1])
-      if segment.verify_table!
+      current_lines = @lines[i..-1] 
+	  segment = case @table_type
+      when :tab
+        TabSegment.new(current_lines)
+      else
+        TableSegment.new(current_lines)
+	  end
+
+      if segment.verify!
         @segments << segment
-	  elsif segment.verify_tab!
-	    @segments << segment
 	  else
 		break
 	  end
@@ -137,7 +157,7 @@ class StataTable
 	  break if i >= @lines.length
     end
 
-	raise "No segments found" if @segments.empty?
+	raise "No segments found:\n #{segment.lines.join("\n")}" if @segments.empty?
     
     @segments
   end

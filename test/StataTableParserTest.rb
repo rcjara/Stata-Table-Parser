@@ -35,9 +35,13 @@ describe StataTableParser do
       @parser.csv_out(File.dirname(__FILE__) + "/../TestTables/SmallTabOut.csv")
     end
 
+	it "should have the right types of tables" do
+	  @parser.table_types.should == [:tab] 
+	end
+
 	it "should get the right csv output" do
-      @parser.csv_out(File.dirname(__FILE__) + "/../TestTables/output.csv")
-      File.read(File.dirname(__FILE__) + "/../TestTables/output.csv").should == File.read(File.dirname(__FILE__) + "/../TestTables/AltSmallTab.csv")
+      @parser.csv_out(File.dirname(__FILE__) + "/../TestTables/AltSmallTabOut.csv")
+      File.read(File.dirname(__FILE__) + "/../TestTables/AltSmallTabOut.csv").should == File.read(File.dirname(__FILE__) + "/../TestTables/AltSmallTab.csv")
 	end
   end
   

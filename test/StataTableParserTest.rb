@@ -22,6 +22,17 @@ describe StataTableParser do
 	end
   end
 
+  context "Single Variable Table" do
+    before(:each) do
+      @parser = StataTableParser.new(File.dirname(__FILE__) + "/../TestTables/SingleVarTable.txt")
+    end
+
+	it "should have the right csv output" do
+      @parser.csv_out(File.dirname(__FILE__) + "/../TestTables/SingleVarTableOut.csv")
+      File.read(File.dirname(__FILE__) + "/../TestTables/SingleVarTableOut.csv").should == File.read(File.dirname(__FILE__) + "/../TestTables/SingleVarTable.csv")
+	end
+  end
+
   context "AltSmallTab.txt" do
     before(:each) do
       @parser = StataTableParser.new(File.dirname(__FILE__) + "/../TestTables/AltSmallTab.txt")

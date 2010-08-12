@@ -34,7 +34,7 @@ class StataTable
     @as_array = []
     @as_array << [@command]
     
-	unless col_var_name.empty?
+	unless col_var_name.empty? | col_var_name.one_match?(HORIZONTAL_BORDER)
       first_line = []
       (num_cols / 2).times { first_line << create_intersection("") }
       first_line << create_intersection(col_var_name)

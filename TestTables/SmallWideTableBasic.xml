@@ -373,13 +373,12 @@
    </Print>
    <PageLayoutZoom>0</PageLayoutZoom>
    <Selected/>
-   <LeftColumnVisible>11</LeftColumnVisible>
+   <LeftColumnVisible>0</LeftColumnVisible>
    <Panes>
     <Pane>
-     <Number>3</Number>
+     <Number>1</Number>
      <ActiveRow>1</ActiveRow>
-     <ActiveCol>23</ActiveCol>
-     <RangeSelection>R2C24:R3C24</RangeSelection>
+     <ActiveCol>1</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

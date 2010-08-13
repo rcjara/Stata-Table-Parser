@@ -28,13 +28,76 @@ class StataTable
       "\"#{line_array.join("\",\"")}\""
     end.join("\n")
   end
+
+  def to_xml
+    self.to_a.collect.with_index do |line_array, i|
+	  s = "   <Row>\n"
+      s << line_array.collect.with_index do |element, j|
+        style = case i
+        when i == 0
+          case j
+		  when j == 0
+		    "s50"
+		  when j < line_array.length - 1
+		    "s29"
+		  else
+		    "s53"
+		  end
+        when i < num_header_lines
+          case j
+		  when j == 0
+		    "s32"
+		  when j < line_array.length - 1
+		    "s31"
+		  else
+            "s32"
+		  end
+        when i == num_header_lines
+          case j
+		  when j == 0
+		    "s27"
+		  when j < line_array.length - 1
+		    "s34"
+		  else
+			"s35"
+		  end
+		when i < num_rows - 1
+          case j
+		  when j == 0
+		    "s27"
+		  when j < line_array.length - 1
+		    "s37"
+		  else
+            "s40"
+		  end
+		else
+          case j
+		  when j == 0
+		    "s28"
+		  when j < line_array.length - 1
+		    "s44"
+		  else
+			"s46"
+		  end
+		end
+        data_type = i < @num_header_lines | j == 0 ? "String" : "Number"
+        unless element.empty? 
+          "<Cell ss:StyleID=\"#{style}\"><Data ss:Type=\"#{data_type}\">#{element}</Data></Cell>\n"
+		else
+          "<Cell ss:StyleID=\"#{style}\"/>\n"
+	    end
+	  end.join
+	end
+  end
   
   def to_a
     return @as_array if @as_array
     @as_array = []
     @as_array << [@command]
-    
+    @num_header_lines = 1 
+
 	unless col_var_name.empty? | col_var_name.one_match?(HORIZONTAL_BORDER)
+	  @num_header_lines += 1
       first_line = []
       (num_cols / 2).times { first_line << create_intersection("") }
       first_line << create_intersection(col_var_name)

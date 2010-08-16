@@ -1,8 +1,11 @@
 require File.dirname(__FILE__) + '/TableSegment.rb'
 require File.dirname(__FILE__) + '/TabSegment.rb'
+require "htmlentities"
 
 class StataTable
   attr_reader :table_type
+
+  @@coder = HTMLEntities.new 
 
   def initialize(lines)
     @command = lines[0]
@@ -33,61 +36,71 @@ class StataTable
     self.to_a.collect.with_index do |line_array, i|
 	  s = "   <Row>\n"
       s << line_array.collect.with_index do |element, j|
-        style = case i
-        when i == 0
-          case j
-		  when j == 0
-		    "s50"
-		  when j < line_array.length - 1
-		    "s29"
-		  else
-		    "s53"
-		  end
-        when i < num_header_lines
-          case j
-		  when j == 0
-		    "s32"
-		  when j < line_array.length - 1
-		    "s31"
-		  else
-            "s32"
-		  end
-        when i == num_header_lines
-          case j
-		  when j == 0
-		    "s27"
-		  when j < line_array.length - 1
-		    "s34"
-		  else
-			"s35"
-		  end
-		when i < num_rows - 1
-          case j
-		  when j == 0
-		    "s27"
-		  when j < line_array.length - 1
-		    "s37"
-		  else
-            "s40"
-		  end
-		else
-          case j
-		  when j == 0
-		    "s28"
-		  when j < line_array.length - 1
-		    "s44"
-		  else
-			"s46"
-		  end
-		end
-        data_type = i < @num_header_lines | j == 0 ? "String" : "Number"
+        style = get_style(i, j, line_array.length)
+		data_type = i < @num_header_lines | j == 0 ? "String" : "Number"
+		data_type = "String" unless element.to_i.to_s == element
         unless element.empty? 
-          "<Cell ss:StyleID=\"#{style}\"><Data ss:Type=\"#{data_type}\">#{element}</Data></Cell>\n"
+          "    <Cell #{style}><Data ss:Type=\"#{data_type}\">#{@@coder.encode(element, :named) }</Data></Cell>\n"
 		else
-          "<Cell ss:StyleID=\"#{style}\"/>\n"
+          "    <Cell #{style}/>\n"
 	    end
 	  end.join
+	  s << "   </Row>\n"
+	  s
+	end.join
+  end
+
+  def get_style(i, j, j_len)
+    style_id = case i
+	when 0
+	  ""
+    when 1
+      case j
+	  when 0
+	    "s27"
+	  when 1...(j_len - 1)
+	    "s28"
+	  else
+	    "s29"
+	  end
+    when 1...@num_header_lines
+      case j
+	  when 0
+	    "s30"
+	  when 1...(j_len - 1)
+	    "s31"
+	  else
+        "s32"
+	  end
+    when @num_header_lines
+      case j
+	  when 0
+	    "s33"
+	  when 1...(j_len - 1)
+	    "s34"
+	  else
+		"s35"
+	  end
+	when (@num_header_lines + 1)..(num_rows + 1)
+      case j
+	  when 0
+	    "s36"
+	  when 1...(j_len - 1)
+	    "s37"
+	  else
+        "s38"
+	  end
+	else
+      case j
+	  when 0
+	    "s39"
+	  when 1...(j_len - 1)
+	    "s40"
+	  else
+		"s41"
+	  end
 	end
+	style_id.empty? ? "" : " ss:StyleID=\"#{style_id}\""
   end
   
   def to_a
@@ -101,14 +114,14 @@ class StataTable
       first_line = []
       (num_cols / 2).times { first_line << create_intersection("") }
       first_line << create_intersection(col_var_name)
-      (num_cols - first_line.length).times { first_line << create_intersection("") }
-      @as_array << first_line
+      (num_cols - first_line.length + 1).times { first_line << create_intersection("") }
+      @as_array << first_line.flatten
 	end
     
     second_line = []
     second_line << row_var_name
     second_line << col_names.collect{|col_name| create_intersection(col_name) }
-    @as_array << second_line
+    @as_array << second_line.flatten
     
     (0...num_rows).each do |i|
       line = []

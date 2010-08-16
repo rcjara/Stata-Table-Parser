@@ -1,5 +1,6 @@
 require File.dirname(__FILE__) + '/TableSegment.rb'
 require File.dirname(__FILE__) + '/TabSegment.rb'
+require File.dirname(__FILE__) + '/NumDecoder.rb'
 require "htmlentities"
 
 class StataTable
@@ -37,10 +38,17 @@ class StataTable
 	  s = "   <Row>\n"
       s << line_array.collect.with_index do |element, j|
         style = get_style(i, j, line_array.length)
-		data_type = i < @num_header_lines | j == 0 ? "String" : "Number"
-		data_type = "String" unless element.to_i.to_s == element
+
+		if i <= @num_header_lines || j == 0 
+			data_type = "String"
+			cleaned_element = @@coder.encode(element, :named)
+		else
+			data_type = "Number"
+			cleaned_element = NumDecoder::decode(element)
+		end
+
         unless element.empty? 
-          "    <Cell #{style}><Data ss:Type=\"#{data_type}\">#{@@coder.encode(element, :named) }</Data></Cell>\n"
+          "    <Cell #{style}><Data ss:Type=\"#{data_type}\">#{cleaned_element}</Data></Cell>\n"
 		else
           "    <Cell #{style}/>\n"
 	    end

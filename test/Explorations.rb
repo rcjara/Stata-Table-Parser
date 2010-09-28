@@ -1,4 +1,3 @@
-puts RUBY_VERSION
 require File.dirname(__FILE__) + '/../lib/StataTableParser.rb'
 require File.dirname(__FILE__) + '/StataTableParserHelper.rb'
 

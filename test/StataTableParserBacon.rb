@@ -1,5 +1,3 @@
-puts RUBY_VERSION
-
 require "Bacon"
 
 require File.dirname(__FILE__) + '/../lib/StataTableParser.rb'

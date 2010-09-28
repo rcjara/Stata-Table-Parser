@@ -119,6 +119,13 @@
    </Borders>
    <NumberFormat ss:Format="#,##0"/>
   </Style>
+  <Style ss:ID="s42">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+  </Style>
  </Styles>
  <Worksheet ss:Name="bea67 by occ21">
   <Table ss:ExpandedColumnCount="24" ss:ExpandedRowCount="9" x:FullColumns="1"

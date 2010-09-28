@@ -119,6 +119,13 @@
    </Borders>
    <NumberFormat ss:Format="#,##0"/>
   </Style>
+  <Style ss:ID="s42">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+  </Style>
  </Styles>
  <Worksheet ss:Name="bea67 by occ21">
   <Table ss:ExpandedColumnCount="24" ss:ExpandedRowCount="9" x:FullColumns="1"
@@ -150,6 +157,7 @@
     <Cell  ss:StyleID="s28"/>
     <Cell  ss:StyleID="s28"/>
     <Cell  ss:StyleID="s29"/>
+    <Cell  ss:StyleID="s31"/>
    </Row>
    <Row>
     <Cell  ss:StyleID="s33"><Data ss:Type="String">bea67</Data></Cell>
@@ -175,6 +183,7 @@
     <Cell  ss:StyleID="s34"><Data ss:Type="String">SERV WORKE</Data></Cell>
     <Cell  ss:StyleID="s34"><Data ss:Type="String">LABORERS</Data></Cell>
     <Cell  ss:StyleID="s35"><Data ss:Type="String">FARM WORKE</Data></Cell>
+    <Cell  ss:StyleID="s42"><Data ss:Type="String">Total</Data></Cell>
    </Row>
    <Row>
     <Cell  ss:StyleID="s36"><Data ss:Type="String">0</Data></Cell>
@@ -200,6 +209,7 @@
     <Cell  ss:StyleID="s37"/>
     <Cell  ss:StyleID="s37"/>
     <Cell  ss:StyleID="s38"/>
+    <Cell  ss:StyleID="s31" ss:Formula="=SUM(RC[-22]:RC[-1])"></Cell>
    </Row>
    <Row>
     <Cell  ss:StyleID="s36"><Data ss:Type="String">1</Data></Cell>
@@ -225,6 +235,7 @@
     <Cell  ss:StyleID="s37"><Data ss:Type="Number">18197.2</Data></Cell>
     <Cell  ss:StyleID="s37"><Data ss:Type="Number">26874.6</Data></Cell>
     <Cell  ss:StyleID="s38"><Data ss:Type="Number">1255965</Data></Cell>
+    <Cell  ss:StyleID="s31" ss:Formula="=SUM(RC[-22]:RC[-1])"></Cell>
    </Row>
    <Row>
     <Cell  ss:StyleID="s36"><Data ss:Type="String">2</Data></Cell>
@@ -250,6 +261,7 @@
     <Cell  ss:StyleID="s37"><Data ss:Type="Number">25682.7</Data></Cell>
     <Cell  ss:StyleID="s37"><Data ss:Type="Number">68575.7</Data></Cell>
     <Cell  ss:StyleID="s38"><Data ss:Type="Number">1682497</Data></Cell>
+    <Cell  ss:StyleID="s31" ss:Formula="=SUM(RC[-22]:RC[-1])"></Cell>
    </Row>
    <Row>
     <Cell  ss:StyleID="s36"><Data ss:Type="String">14</Data></Cell>
@@ -275,6 +287,7 @@
     <Cell  ss:StyleID="s37"><Data ss:Type="Number">116631.0</Data></Cell>
     <Cell  ss:StyleID="s37"><Data ss:Type="Number">1011181</Data></Cell>
     <Cell  ss:StyleID="s38"><Data ss:Type="Number">3925.57</Data></Cell>
+    <Cell  ss:StyleID="s31" ss:Formula="=SUM(RC[-22]:RC[-1])"></Cell>
    </Row>
    <Row>
     <Cell  ss:StyleID="s36"><Data ss:Type="String">15</Data></Cell>
@@ -300,6 +313,7 @@
     <Cell  ss:StyleID="s37"><Data ss:Type="Number">2208.41</Data></Cell>
     <Cell  ss:StyleID="s37"><Data ss:Type="Number">30019.6</Data></Cell>
     <Cell  ss:StyleID="s38"/>
+    <Cell  ss:StyleID="s31" ss:Formula="=SUM(RC[-22]:RC[-1])"></Cell>
    </Row>
    <Row>
     <Cell  ss:StyleID="s39"><Data ss:Type="String">16</Data></Cell>
@@ -325,6 +339,7 @@
     <Cell  ss:StyleID="s40"><Data ss:Type="Number">45450.9</Data></Cell>
     <Cell  ss:StyleID="s40"><Data ss:Type="Number">181288.0</Data></Cell>
     <Cell  ss:StyleID="s41"/>
+    <Cell  ss:StyleID="s31" ss:Formula="=SUM(RC[-22]:RC[-1])"></Cell>
    </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">

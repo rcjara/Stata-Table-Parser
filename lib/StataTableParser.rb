@@ -30,7 +30,7 @@ class StataTableParser
     File.open(filename, 'w') do |w|
 	  w << xml_header(num_rows, num_cols)
       tables.each do |table|
-        w << table.to_xml
+        w << table.to_xml(options)
         #w << "   <Row/>\n"
       end
 	  w << xml_footer
@@ -191,6 +191,13 @@ class StataTableParser
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
    </Borders>
    <NumberFormat ss:Format="#,##0"/>
+  </Style>
+  <Style ss:ID="s42">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
   </Style>
  </Styles>
  <Worksheet ss:Name="bea67 by occ21">

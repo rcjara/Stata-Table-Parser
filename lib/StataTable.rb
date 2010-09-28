@@ -33,7 +33,7 @@ class StataTable
     end.join("\n")
   end
 
-  def to_xml
+  def to_xml(options = {})
     self.to_a.collect.with_index do |line_array, i|
 	  s = "   <Row>\n"
       s << line_array.collect.with_index do |element, j|
@@ -53,9 +53,34 @@ class StataTable
           "    <Cell #{style}/>\n"
 	    end
 	  end.join
+	  if options[:row_totals]
+		style = get_total_style(i)
+		s << if i > 0 && i < @num_header_lines
+		  "    <Cell #{style}/>\n"
+		elsif i == @num_header_lines
+		  "    <Cell #{style}><Data ss:Type=\"String\">Total</Data></Cell>\n"
+		elsif i > 0
+		  "    <Cell #{style} ss:Formula=\"=SUM(RC[-#{num_cols}]:RC[-1])\"></Cell>\n"
+		else
+		  ""
+		end
+	  end
 	  s << "   </Row>\n"
 	  s
 	end.join
+  end
+
+  #the style for row totals
+  def get_total_style(i)
+    style_id = case i
+	when 0...@num_header_lines
+	  "s31"
+	when @num_header_lines
+	  "s42"
+	else
+	  "s31"
+	end
+	style_id.empty? ? "" : " ss:StyleID=\"#{style_id}\""
   end
 
   def get_style(i, j, j_len)

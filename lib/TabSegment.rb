@@ -22,10 +22,10 @@ class TabSegment < TableSegment
       end
     end
     unless end_point
-	  return false 
-	end
+      return false 
+    end
     @lines = @lines[start_point..end_point] 
-	@command = :tab
+    @command = :tab
     true
   end
 
@@ -49,13 +49,13 @@ class TabSegment < TableSegment
   def rows
     return @rows if @rows
     found_end = false
-	pre_end = false
+    pre_end = false
     @num_cells = 1
     cur_num_cells = 0
-	num_borders = 0
+    num_borders = 0
     @rows = (start_of_rows...@lines.length).select do |line_num|
       line = @lines[line_num]
-      has_var_name = if line.one_match?(/^\s*?\S[^\|]+?\s*?\|+?/)
+      has_var_name = if line =~ /^\s*?\S[^\|]+?\s*?\|+?/
         cur_num_cells = 0
         true
       else
@@ -65,7 +65,7 @@ class TabSegment < TableSegment
       end
       
       #need to take the line after we have found two borders.  Hence this messiness
-	  num_borders += 1 if line.one_match?(HORIZONTAL_BORDER)
+      num_borders += 1 if line.one_match?(HORIZONTAL_BORDER)
       found_end = pre_end
       pre_end = true if num_borders == 2
 

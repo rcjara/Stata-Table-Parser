@@ -1,14 +1,14 @@
-require File.dirname(__FILE__) + '/StataTable.rb'
+require File.dirname( File.expand_path(__FILE__)) + '/StataTable.rb'
 
 
 HORIZONTAL_BORDER = /^-----/
 
-class StataTableParser  
+class StataTableParser
   def initialize(filename)
     @filename = filename
     @lines = File.read(filename).split(MAC_WIN_UNIX_LINE_BREAKS)
   end
-  
+
   def csv_out(filename = nil, options = {})
     unless filename
       filename = @filename.gsub(/\.txt|\.log/, ".csv")
@@ -20,32 +20,32 @@ class StataTableParser
       end
     end
   end
-  
+
   def xml_out(filename = nil, options = {})
     unless filename
       filename = @filename.gsub(/\.txt|\.log/, ".xml")
     end
-	num_rows = tables.inject(0) {|sum, table| sum + 1 + table.num_rows}
+  num_rows = tables.inject(0) {|sum, table| sum + 1 + table.num_rows}
     num_cols = tables.inject(0) {|widest, table| table.num_cols > widest ? table.num_cols : widest }
     File.open(filename, 'w') do |w|
-	  w << xml_header(num_rows, num_cols)
+    w << xml_header(num_rows, num_cols)
       tables.each do |table|
         w << table.to_xml(options)
         #w << "   <Row/>\n"
       end
-	  w << xml_footer
+    w << xml_footer
     end
   end
 
   def num_tables
     table_indexes.length
   end
-  
+
   def first_table
     tables.first
   end
-  
-  
+
+
   def table_indexes
     return @table_indexes if @table_indexes
     @table_indexes = []
@@ -54,7 +54,7 @@ class StataTableParser
     end
     @table_indexes
   end
-  
+
   def tables
     return @tables if @tables
     @tables = []
@@ -64,7 +64,7 @@ class StataTableParser
     end
     @tables
   end
-  
+
   def table_types
     tables.collect { |table| table.table_type }
   end
